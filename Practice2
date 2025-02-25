@@ -1,0 +1,79 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+
+# Load all sheets from Excel
+file_path = "file.xlsx"
+metric_data = pd.read_excel(file_path, sheet_name="Metric Data")
+country_thresholds = pd.read_excel(file_path, sheet_name="Country-Level Thresholds")
+segment_thresholds = pd.read_excel(file_path, sheet_name="Segment-Level Thresholds")
+percentile_data = pd.read_excel(file_path, sheet_name="Percentile Data")
+rr_event_details = pd.read_excel(file_path, sheet_name="RR Event Details")  # NEW SHEET
+
+# Rename columns for clarity
+country_thresholds.rename(columns={'80th Percentile': '80th_Percentile_Country'}, inplace=True)
+segment_thresholds.rename(columns={'80th Percentile': '80th_Percentile_Segment'}, inplace=True)
+
+# Merge Metric Data with Country and Segment Thresholds
+df = metric_data.merge(country_thresholds, on="Country_code", how="left")
+df = df.merge(segment_thresholds, on="Segment_name", how="left")
+
+# Compute Recommended Threshold as max of country-level and segment-level 80th percentile
+df["Recommended_Threshold"] = df[["80th_Percentile_Country", "80th_Percentile_Segment"]].max(axis=1)
+
+# Merge with Percentile Data
+df = df.merge(percentile_data, on=["relationship-ids", "Country_code", "Segment_name", "Batch_run_date"], how="left")
+
+# Merge with Risk Relevant (RR) Event Details
+df = df.merge(rr_event_details, on=["relationship-ids"], how="left")
+
+# Save final output to Excel
+output_file = "output_with_rr_thresholds.xlsx"
+df.to_excel(output_file, index=False)
+print(f"✅ Data processing complete! Output saved to '{output_file}'.")
+
+# ======================== PLOTTING GRAPHS ======================== #
+
+# 1️⃣ BAR CHART: Country-wise 80th Percentile vs Recommended Threshold vs RR Trade Amount
+plt.figure(figsize=(12, 5))
+df_grouped = df.groupby("Country_code")[["80th_Percentile_Country", "Recommended_Threshold", "Aggregated_Trade_Amount_RR"]].mean()
+df_grouped.plot(kind="bar", figsize=(12, 5))
+plt.title("Country-wise 80th Percentile, Recommended Threshold, and RR Trade Amount")
+plt.xlabel("Country")
+plt.ylabel("Trade Amount")
+plt.legend(["80th Percentile", "Recommended Threshold", "RR Trade Amount"])
+plt.grid(axis="y")
+plt.xticks(rotation=45)
+plt.show()
+
+# 2️⃣ SCATTER PLOT: Relationship-wise Trade Amount vs Thresholds (including RR Data)
+fig = px.scatter(df, x="Average_trade_amount", y="Recommended_Threshold",
+                 color="Country_code", size="Aggregated_Trade_Amount_RR",
+                 title="Trade Amount vs Recommended Threshold (with RR Events)",
+                 hover_data=["relationship-ids"])
+fig.show()
+
+# 3️⃣ BOX PLOT: Trade Amount Distribution per Country (Including RR Amounts)
+plt.figure(figsize=(12, 5))
+sns.boxplot(x="Country_code", y="Average_trade_amount", data=df, showfliers=False)
+sns.stripplot(x="Country_code", y="Aggregated_Trade_Amount_RR", data=df, color='red', size=5, jitter=True)
+plt.title("Trade Amount Distribution by Country (RR Amounts Highlighted)")
+plt.xlabel("Country")
+plt.ylabel("Trade Amount")
+plt.xticks(rotation=45)
+plt.show()
+
+# 4️⃣ LINE CHART: Threshold Trends Over Time (Including RR Data)
+plt.figure(figsize=(12, 5))
+df_grouped_time = df.groupby("Batch_run_date")[["Recommended_Threshold", "80th_Percentile_Country", "Aggregated_Trade_Amount_RR"]].mean()
+df_grouped_time.plot(kind="line", marker='o', figsize=(12, 5))
+plt.title("Threshold Trends Over Time (Including RR Trade Amounts)")
+plt.xlabel("Batch Run Date")
+plt.ylabel("Threshold Values")
+plt.legend(["Recommended Threshold", "80th Percentile", "RR Trade Amount"])
+plt.grid()
+plt.xticks(rotation=45)
+plt.show()
+
+print("✅ Visualization complete!")
