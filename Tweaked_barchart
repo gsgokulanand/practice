@@ -1,0 +1,15 @@
+# 1️⃣ BAR CHART: Segment-wise 80th Percentile vs Recommended Threshold vs RR Trade Amount
+plt.figure(figsize=(10, 5))
+
+# Group by Segment and calculate mean values for thresholds
+df_segment = df.groupby("Segment_name")[["80th_Percentile_Country", "Recommended_Threshold", "Aggregated_Trade_Amount_RR"]].mean()
+
+# Plot
+df_segment.plot(kind="bar", figsize=(10, 5))
+plt.title("Segment-wise 80th Percentile, Recommended Threshold, and RR Trade Amount")
+plt.xlabel("Segment (CCIB / CPBB)")
+plt.ylabel("Trade Amount")
+plt.legend(["80th Percentile", "Recommended Threshold", "RR Trade Amount"])
+plt.grid(axis="y")
+plt.xticks(rotation=0)  # Keep segment labels horizontal
+plt.show()
