@@ -1,0 +1,21 @@
+How to Run the Code
+
+1. Install Required Dependencies
+
+Make sure you have Python 3.11, PySpark, and Java JDK 17 installed. If PySpark is not installed, run:
+
+pip install pyspark
+
+2. Run the PySpark Job
+
+Navigate to the directory containing app.py and execute:
+
+python3 app.py ./data/dict.txt ./data/articles.txt ./good_articles ./bad_articles
+
+3. Expected Output
+	•	The script reads dict.txt and articles.txt.
+	•	It filters out empty articles.
+	•	It classifies articles into:
+	•	Good Articles (≤30% misspellings) → saved in good_articles/
+	•	Bad Articles (>30% misspellings) → saved in bad_articles/
+	•	The results are stored in text files in the output folders.
