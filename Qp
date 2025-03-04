@@ -1,0 +1,90 @@
+**Subject:** Proposal for Backtesting Plan - Quantexa Integration into CASA AML Monitoring  
+
+---
+
+**Dear Team,**  
+
+As we integrate **Quantexa** into the existing CASA AML transactional monitoring architecture, a robust **backtesting plan** is critical to validate its effectiveness in reducing false positives and aligning with ECM’s case closure rules. Below is a proposed approach:  
+
+---
+
+### **1. Objectives of Backtesting**  
+- Validate Quantexa’s ability to **reduce false positives** while maintaining detection of true positives.  
+- Ensure Quantexa’s outputs align with **ECM’s case closure rules** (e.g., Fast Track, Mirror Closure).  
+- Confirm compliance with **regional AML policies** (CB vs. NCB countries).  
+
+---
+
+### **2. Key Steps for Backtesting**  
+
+#### **Step 1: Define Scope & Success Metrics**  
+- **Scope**:  
+  - Focus on **historical cases** from the last 12-24 months.  
+  - Include both **CB and NCB regions** to test regional variations.  
+- **Success Metrics**:  
+  - **False Positive Reduction Rate**: % reduction in cases flagged by CASA but cleared by Quantexa.  
+  - **True Positive Retention Rate**: % of true positives retained by Quantexa.  
+  - **Alignment with ECM Rules**: % of Quantexa-filtered cases matching ECM’s closure criteria.  
+
+#### **Step 2: Prepare Historical Data**  
+- **Data Requirements**:  
+  - **CASA AML Outputs**: Historical alerts, detection scenarios, and transaction data.  
+  - **ECM Closure Outcomes**: Case closure decisions (e.g., Fast Track, Mirror Closure) and analyst notes.  
+  - **Entity & Transaction Mappings**: Existing entity groupings and transaction links.  
+- **Data Segmentation**:  
+  - Split data into **CB and NCB subsets** for regional testing.  
+  - Include a mix of **true positives** and **false positives** for balanced evaluation.  
+
+#### **Step 3: Configure Quantexa for Backtesting**  
+- **Entity Resolution**: Use historical entity groupings to mirror CASA’s logic.  
+- **Detection Scenarios**: Apply Quantexa’s contextual monitoring to existing CASA DS.  
+- **Regional Rules**: Disable Mirror Closure logic for NCB countries.  
+
+#### **Step 4: Run Quantexa on Historical Data**  
+- Process historical CASA alerts through Quantexa to generate **enriched outputs**.  
+- Compare Quantexa’s filtered alerts with:  
+  - **CASA’s Original Alerts**: Measure false positive reduction.  
+  - **ECM Closure Decisions**: Check alignment with Fast Track, Mirror Closure, etc.  
+
+#### **Step 5: Analyze Results**  
+- **Quantitative Analysis**:  
+  - Calculate **false positive reduction rate** and **true positive retention rate**.  
+  - Measure **alignment with ECM rules** (e.g., % of Quantexa-filtered cases matching Fast Track criteria).  
+- **Qualitative Analysis**:  
+  - Review cases where Quantexa’s outputs deviate from ECM’s closure logic.  
+  - Identify root causes (e.g., mismatched entity resolution, transaction overlaps).  
+
+#### **Step 6: Refine Quantexa Configuration**  
+- Adjust Quantexa’s logic based on backtesting results (e.g., refine entity resolution, tweak risk thresholds).  
+- Re-run backtesting on a smaller dataset to validate improvements.  
+
+---
+
+### **3. Resources Required**  
+- **Data**: Historical CASA alerts, ECM closure outcomes, and entity/transaction mappings.  
+- **Tools**: Quantexa platform, data processing pipelines, and analytics dashboards.  
+- **Team**: SMEs for AML rules, data engineers for pipeline setup, and analysts for case reviews.  
+
+---
+
+### **4. Timeline**  
+| **Phase**               | **Duration** |  
+|--------------------------|--------------|  
+| Data Preparation         | 2 weeks      |  
+| Quantexa Configuration   | 1 week       |  
+| Backtesting Execution    | 2 weeks      |  
+| Analysis & Refinement    | 1 week       |  
+
+---
+
+### **5. Risks & Mitigations**  
+- **Risk**: Historical data may not reflect current AML trends.  
+  - **Mitigation**: Use recent data (last 12 months) and supplement with synthetic data if needed.  
+- **Risk**: Quantexa’s logic may conflict with ECM’s manual workflows.  
+  - **Mitigation**: Involve analysts early to validate outputs and provide feedback.  
+
+---
+
+**Next Steps**:  
+- Confirm backtesting scope and success metrics with stakeholders.  
+- Begin data preparation and pipeline setup
