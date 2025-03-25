@@ -1,0 +1,118 @@
+ADO Features and User Stories – AML Monitoring System
+
+Feature 1: Data Ingestion & Integration Setup
+
+Description: Establishing data pipelines to ensure transaction data is captured, stored, and made available for monitoring.
+
+User Stories:
+	1.	Transaction Data Ingestion
+	•	Configure ingestion pipelines to capture all customer transactions from core banking systems into MANTAS.
+	•	Ensure data consistency, integrity, and completeness before processing.
+	•	Implement error handling and logging for missing or delayed transactions.
+	2.	Integration Between MANTAS and Quantexa
+	•	Develop API-based or flat-file integration to send all transactions and alerted accounts from MANTAS to Quantexa.
+	•	Set up real-time or batch processing methods to ensure seamless data transfer.
+	•	Implement logging and alerting mechanisms for integration failures.
+	3.	Historical Data Storage in FCCLA
+	•	Store all transactions and alerted accounts in FCCLA for historical risk assessment.
+	•	Design schema and indexing strategies to optimize retrieval for analytics.
+	•	Enable scheduled data archival and deletion policies based on retention requirements.
+
+Feature 2: Risk Scoring in Quantexa
+
+Description: Implement risk-based scoring using contextual analytics, entity resolution, and network analysis.
+
+User Stories:
+	4.	Entity Resolution & Data Linkage
+	•	Establish entity resolution logic to link transactions to unique customer profiles.
+	•	Merge fragmented data from multiple sources to create a single view of each entity.
+	•	Validate entity resolution accuracy to avoid false associations.
+	5.	Network Analysis & Relationship Mapping
+	•	Implement algorithms to detect hidden relationships between accounts based on transaction patterns.
+	•	Develop network graphs to visualize connections between customers and intermediaries.
+	•	Perform periodic validation of network analysis outputs to fine-tune risk detection.
+	6.	Risk-Based Event Scoring
+	•	Assign risk scores to events using predefined criteria and machine learning models.
+	•	Define score thresholds for snoozing low-risk events and escalating high-risk ones.
+	•	Conduct backtesting with historical events to refine scoring accuracy.
+
+Feature 3: Event Processing & Escalation to ECM
+
+Description: Processing risk-scored events and determining which ones should be escalated for further investigation.
+
+User Stories:
+	7.	Processing Risk-Scored Events in MANTAS
+	•	Ingest risk-scored events from Quantexa and update their statuses accordingly.
+	•	Implement rules to prioritize high-risk events while suppressing false positives.
+	•	Ensure audit trails are maintained for all status updates.
+	8.	Escalation of High-Risk Events to ECM
+	•	Develop workflows to send only high-risk events from MANTAS to ECM.
+	•	Apply pre-case filtering logic to determine if events should be auto-closed or escalated.
+	•	Validate data integrity between MANTAS and ECM to prevent event duplication.
+
+Feature 4: Case Management & Investigation in ECM
+
+Description: Managing escalated cases within ECM and ensuring they are properly investigated and resolved.
+
+User Stories:
+	9.	Case Creation & Assignment in ECM
+	•	Configure ECM to automatically generate cases from high-risk events.
+	•	Implement rules for assigning cases to analysts based on risk level and workload.
+	•	Ensure case details include relevant transaction and entity information.
+	10.	Case Review & Decision Making
+
+	•	Develop workflows for analysts to review and investigate cases.
+	•	Integrate additional data sources within ECM to enrich investigations.
+	•	Provide analysts with decision-making options (escalation, dismissal, further review).
+
+	11.	Regulatory Reporting & Audit Logs
+
+	•	Enable case outcomes to be documented for audit and compliance tracking.
+	•	Implement reporting features to generate Suspicious Activity Reports (SARs) for regulators.
+	•	Ensure case closure reasons and investigation actions are logged for future reference.
+
+Feature 5: Testing & Validation
+
+Description: Ensuring that the implemented solution functions correctly across all components.
+
+User Stories:
+	12.	Unit Testing of Data Pipelines
+
+	•	Validate data ingestion and transformation processes for accuracy.
+	•	Simulate edge cases like missing data, duplicate transactions, and format mismatches.
+	•	Implement automated validation scripts for ongoing monitoring.
+
+	13.	Validation of Risk Scoring in Quantexa
+
+	•	Compare newly generated risk scores with historical patterns to verify consistency.
+	•	Conduct sample-based manual reviews to assess scoring accuracy.
+	•	Fine-tune risk scoring parameters to minimize false positives and negatives.
+
+	14.	End-to-End Testing from Ingestion to ECM
+
+	•	Validate that transactions flow correctly from MANTAS to Quantexa, back to MANTAS, and finally to ECM.
+	•	Ensure events are processed within SLA timelines without significant delays.
+	•	Conduct user acceptance testing (UAT) with AML analysts to confirm usability.
+
+Feature 6: Deployment & Monitoring
+
+Description: Deploying the system in production and ensuring ongoing stability through monitoring.
+
+User Stories:
+	15.	Deployment of AML Monitoring System
+
+	•	Develop deployment strategy (phased rollout, big-bang, parallel run).
+	•	Configure production environments, ensuring scalability and security.
+	•	Conduct pre-go-live checks and risk assessments before full deployment.
+
+	16.	Real-Time Monitoring & System Alerts
+
+	•	Set up monitoring dashboards for transaction volumes, event counts, and processing times.
+	•	Implement alert mechanisms for system failures, data mismatches, and anomalies.
+	•	Enable automated retry mechanisms for failed data transfers.
+
+	17.	Post-Deployment Performance Review
+
+	•	Generate performance reports comparing expected vs. actual system behavior.
+	•	Identify areas for further optimization based on post-deployment findings.
+	•	Collect feedback from AML analysts and compliance teams for potential enhancements.
