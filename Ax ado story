@@ -1,0 +1,37 @@
+ADO Features and User Stories for Implementation
+
+Feature 1: Data Ingestion & Integration Setup
+
+User Story 1.1: As a data engineer, I want to configure data ingestion pipelines from core transaction systems to MANTAS so that transaction data is available for monitoring.
+User Story 1.2: As a system architect, I want to establish API-based or flat-file integration between MANTAS and Quantexa so that event data flows seamlessly.
+User Story 1.3: As an AML analyst, I want all transactions and alerted accounts to be stored in FCCLA so that historical data can be referenced for risk analysis.
+
+Feature 2: Risk Scoring in Quantexa
+
+User Story 2.1: As a data scientist, I want to apply entity resolution in Quantexa to link transactions to known customers/entities so that risk analysis is more accurate.
+User Story 2.2: As a system analyst, I want to implement network analysis in Quantexa to detect hidden relationships between accounts so that suspicious links can be flagged.
+User Story 2.3: As a risk officer, I want Quantexa to assign a score to each event based on predefined criteria so that low-risk events are snoozed, and high-risk ones are promoted.
+
+Feature 3: MANTAS Event Processing & Escalation to ECM
+
+User Story 3.1: As a MANTAS developer, I want to receive risk-scored events from Quantexa and update the event status so that only high-risk events are escalated.
+User Story 3.2: As an AML analyst, I want MANTAS to use Quantexa scores to prioritize cases so that investigation efforts are focused on high-risk activities.
+User Story 3.3: As an ECM administrator, I want to ensure only high-risk events are converted into cases in ECM so that unnecessary case creation is avoided.
+
+Feature 4: Case Management & Investigation in ECM
+
+User Story 4.1: As a compliance officer, I want to review high-risk cases in ECM so that necessary investigations can be conducted.
+User Story 4.2: As a fraud analyst, I want to escalate flagged cases to regulators if required so that compliance obligations are met.
+User Story 4.3: As an AML investigator, I want to dismiss false positives in ECM so that analysts can focus on real threats.
+
+Feature 5: Testing & Validation
+
+User Story 5.1: As a QA engineer, I want to conduct unit tests on MANTAS-Quantexa integration so that data is correctly transmitted.
+User Story 5.2: As a business analyst, I want to validate that risk-scoring logic in Quantexa is correctly applied so that false positives are reduced.
+User Story 5.3: As a security officer, I want to perform end-to-end testing from data ingestion to ECM case creation so that the AML monitoring system works as expected.
+
+Feature 6: Deployment & Monitoring
+
+User Story 6.1: As a DevOps engineer, I want to deploy the new AML system in a controlled manner so that operational disruptions are minimized.
+User Story 6.2: As a monitoring specialist, I want to set up alerts on system failures or data mismatches so that any issues are quickly identified.
+User Story 6.3: As a compliance manager, I want to generate performance reports post-deployment so that regulatory expectations are met.
