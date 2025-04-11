@@ -1,0 +1,23 @@
+1. Event Hold Back Mechanism between ECM and Quantexa
+Implement logic to hold back events at Quantexa side for certain markets based on frequency (e.g., Weekly, Bi-weekly, Month-end). This is to ensure appropriate alignment of event ingestion timing with ECM workflows. Pilot validation will be done with one market before full rollout.
+
+2. Integration to Transfer Scored Events from Quantexa to ECM
+Quantexa will send scored events to ECM in batches with a table containing event metadata like case ID, event ID, score, rules, and description. ECM will ingest these into the pre-case layer. A reconciliation step must ensure the number of records received matches the source.
+
+3. Data Feed from ECM to Quantexa
+ECM will provide a daily data feed to Quantexa for contextual enrichment. The feed includes case IDs, Txn IDs, countries, scores, and rules. Reconciliation and validation of record count must be part of the process.
+
+4. DQ Stage 1 – ECM to Quantexa
+Implement data quality checks for outbound ECM data before Quantexa ingestion. This includes null checks, format validation, and expected value range checks. Reconciliation and exception handling are required for failed records.
+
+5. Transferring Task IDs from Quantexa to ECM
+Each batch from Quantexa will include task IDs created for high-risk events. These task IDs must be stored and displayed in ECM, enabling traceability and case tracking. Ensure reconciliation of task IDs between both systems.
+
+6. DQ Stage 2 – Quantexa to ECM
+Before ECM ingestion, a second level of DQ checks should be applied on Quantexa output to validate completeness and accuracy of scored data. Failed records should be logged and not passed downstream.
+
+7. ECM UI Changes to Display Task IDs
+Enhance the ECM UI to show task IDs for each incoming case from Quantexa. These task IDs must be easily searchable and should allow analysts to trace back to Quantexa events.
+
+8. Case Creation & Assignment in ECM
+Enable ECM to automatically create and assign cases based on event severity and analyst workload. Assignment logic can include region, score thresholds, and priority settings to optimize case review flows.
