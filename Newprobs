@@ -10,3 +10,16 @@ Key challenges being addressed:
 	•	Operational Scalability: Manual triaging of alerts becomes inefficient and inconsistent across markets.
 
 Implementing Contextual Monitoring will help mitigate these issues by automating the end-to-end flow from event scoring to case creation in ECM, improving detection, prioritization, and operational efficiency in the existing AML framework.
+
+Background and Problem Statement
+
+The current MANTAS AML system operates on a traditional, rules-based alert generation mechanism that often lacks contextual intelligence. This leads to high volumes of low-risk alerts, increased manual triaging, and suboptimal risk identification — especially in complex transactional environments.
+
+With evolving regulatory expectations and the increasing complexity of financial crime, there is a growing need to enhance the Transaction Monitoring system’s detection capabilities. The proposed enhancement introduces Contextual Monitoring using Quantexa’s entity resolution and network analytics to deliver a more connected and comprehensive view of customer behavior and relationships.
+
+This approach enables improved risk detection accuracy, reduces false positives, and ensures better prioritization of truly suspicious activities.
+
+Key challenges being addressed:
+	•	Limited Risk Visibility: Current alerts lack insights into network connections and behavioral patterns.
+	•	High False Positives: A large number of alerts do not result in actionable cases, burdening investigation teams.
+	•	Operational Inefficiency: Manual triaging of alerts is inconsistent and resource-intensive across markets.
