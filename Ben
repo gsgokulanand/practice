@@ -6,3 +6,13 @@ Benefit Details (Crisp Version):
 	•	Improves analyst efficiency through streamlined workflows and smart case assignment.
 	•	Maintains complete audit trails for compliance, monitoring, and regulatory readiness.
 	•	Offers a scalable, configurable setup to easily onboard new markets or changes.
+Background and Problem Statement:
+
+The current MANTAS system operates on traditional, rules-based alert generation, which results in high volumes of low-risk alerts and increased manual triaging. This limits the system’s ability to effectively identify complex or hidden financial crimes.
+
+To address this, the Contextual Monitoring enhancement uses Quantexa’s entity resolution and network analytics capabilities to provide a more comprehensive and connected view of customer transactions and behaviors. By scoring events based on contextual factors, the solution significantly improves risk detection accuracy and relevance.
+
+Key issues being addressed:
+	•	Limited Detection Accuracy: Rules-based alerts often miss subtle risk patterns or connections between entities.
+	•	High Analyst Workload: Excessive false positives overwhelm operational teams.
+	•	Lack of Contextual Intelligence: Existing alerts lack the relationship and behavioral insights needed for deeper investigations.
