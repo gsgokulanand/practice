@@ -23,3 +23,10 @@ Key challenges being addressed:
 	•	Limited Risk Visibility: Current alerts lack insights into network connections and behavioral patterns.
 	•	High False Positives: A large number of alerts do not result in actionable cases, burdening investigation teams.
 	•	Operational Inefficiency: Manual triaging of alerts is inconsistent and resource-intensive across markets.
+Brief Description:
+
+This change request (CR) introduces Contextual Monitoring capabilities into the existing MANTAS AML (Anti-Money Laundering) system under the FCC8 – Transaction Monitoring (TM) Trade Fraud and FCC – ACT processes. The enhancement leverages Quantexa to apply advanced scoring based on network relationships, entity behavior, and transactional context.
+
+The integration will automate the creation of high-risk cases (Qx score > 1) in ECM and enhance downstream case management through ECM and FCCIM. This implementation improves risk detection by enabling a more intelligent and targeted alert-to-case pipeline, thereby reducing false positives and analyst fatigue.
+
+The solution will be deployed globally across 41 countries where MANTAS TM is operational, aligning with both WRB and CIB segments and maintaining adherence to FCC and Group Compliance standards.
