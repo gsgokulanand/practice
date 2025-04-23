@@ -1,0 +1,26 @@
+Absolutely! Here’s the updated Minutes of Meeting (MoM) with your additional points included:
+
+Subject: MoM – Egypt FSS AML Rollout Planning Discussion
+Date: [Insert meeting date]
+Attendees: [List key participants if needed]
+
+Key Discussion Points & Action Items:
+	1.	Funding Approval:
+Approval for Egypt FSS AML rollout has been secured. We are now clear to initiate the technical implementation activities from our side.
+	2.	ECM Dependency:
+Egypt needs to be configured as a new country within the ECM Case Management system. This is a critical dependency, and the implementation timeline for this activity needs to be confirmed by the ECM team.
+	3.	UAT Planning:
+Post-ECM configuration, end-to-end testing will be carried out. UAT sign-off will be planned based on the successful completion of these tests.
+	4.	Timelines & Go-Live:
+The target is to complete all required implementation and testing activities by [insert deadline, e.g., end of May 2025].
+The Go-Live date is currently unknown and will be finalized based on the confirmation of ECM implementation timelines.
+
+Next Steps:
+	•	Follow up with ECM team for confirmation on their implementation schedule.
+	•	Proceed with development activities for Egypt FSS AML scenarios.
+	•	Align UAT and Go-Live planning based on ECM updates.
+
+Best regards,
+[Your Name]
+
+Let me know if you’d like help converting this into a formal email body.
