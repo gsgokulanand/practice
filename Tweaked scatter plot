@@ -1,7 +1,0 @@
-# 2️⃣ SCATTER PLOT: Segment-level Trade Amount vs Recommended Threshold (with RR Data)
-fig = px.scatter(df.groupby("Segment_name")[["Recommended_Threshold", "Aggregated_Trade_Amount_RR"]].mean().reset_index(),
-                 x="Segment_name", y="Recommended_Threshold",
-                 color="Segment_name", size="Aggregated_Trade_Amount_RR",
-                 title="Segment-wise Trade Amount vs Recommended Threshold (with RR Events)",
-                 hover_data=["Segment_name"])
-fig.show()
