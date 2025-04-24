@@ -1,0 +1,12 @@
+This epic is to enable the setup and deployment of SSO Transaction Monitoring (TM) scenarios for Egypt (EG) and Saudi Arabia (SA) within the ECM (Enterprise Case Management) platform.
+
+As part of this implementation, necessary configurations, integrations, and validations need to be completed in ECM to support country-specific TM alerts investigation and case management workflows.
+
+The scope includes:
+	•	Creation of country-specific case queues/routing rules
+	•	Configuration of user roles and access rights
+	•	Integration with MANTAS/Quantexa for TM alert ingestion
+	•	Support for BAU readiness and UAT activities
+	•	Validation of alert generation and case creation for both EG and SA
+
+This Epic is critical to support compliance and regulatory reporting requirements as part of the regional TM rollout plan for 2025.
