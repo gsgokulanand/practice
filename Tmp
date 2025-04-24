@@ -1,7 +1,0 @@
-Acceptance Criteria:
-	1.	Case queues for EG and SA are created in ECM.
-	2.	User roles and access are configured as per country requirements.
-	3.	ECM is integrated with TM systems for alert ingestion.
-	4.	TM alerts for EG and SA trigger automatic case creation.
-	5.	End-to-end testing for alert flow and case creation is completed.
-	6.	Setup is documented and approved by stakeholders.
