@@ -1,0 +1,50 @@
+Line Item 6 — STORY 8000143
+
+Story:
+As an Investigator / ECM User, I want the invalid data (rejected records) to be sent from FCC LA Contextual Monitoring to ECM, so that the correct number of processed records is logged for transparency and tracking.
+
+Additional Description:
+	•	The processing report in ECM must display the number of records passed, failed, and reasons for any rejected records.
+	•	ECM should track the last successful update count when receiving completed files from FCC LA Contextual Monitoring.
+	•	This ensures that ECM users can validate completeness of each batch and identify gaps, if any.
+
+⸻
+
+Line Item 7 — STORY 7998356
+
+Story:
+As an ECM User, I want ECM to receive and store Data Quality (DQ) check results from FCC LA Contextual Monitoring, so that DQ validations are tracked for each case and reviewed if required.
+
+Additional Description:
+	•	ECM must display DQ results from FCC LA Contextual Monitoring for relevant cases.
+	•	DQ scores should include checks on record count, data match, and auto-task mapping.
+	•	These values must be pushed into ECM and tagged to cases for easy analysis.
+	•	The existing DQ logic must align with Data Quality Management standards.
+
+⸻
+
+Line Item 8 — STORY 7998277
+
+Story:
+As an ECM User, I want ECM to automatically receive scoring data and context from FCC LA Contextual Monitoring for all relevant cases, so that the right events are scored correctly and consistently.
+
+Additional Description:
+	•	ECM should ingest scoring results with all available metadata from FCC LA Contextual Monitoring.
+	•	This includes case details, scoring breakdown, contributing rules, and task mappings.
+	•	ECM must also support full automation of case creation, if scoring is available.
+	•	The system should handle different scoring cycles (daily, weekly, etc.) and allow backtesting for validation.
+
+⸻
+
+Line Item 9 — STORY 8137879
+
+Story:
+As a Reporting Analyst, I want all existing reports in ECM to include backtesting cases and auto-closed cases from FCC LA Contextual Monitoring, so that performance and efficiency metrics reflect full coverage.
+
+Additional Description:
+	•	ECM reports must include metrics like:
+	•	Efficiency month-on-month across markets
+	•	Performance of scoring logic
+	•	Rule-level impact on efficiency and effectiveness
+	•	Backtesting sample success rates
+	•	Helps stakeholders evaluate the accuracy and completeness of the contextual monitoring engine.
