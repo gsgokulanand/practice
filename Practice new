@@ -1,0 +1,72 @@
+Story 7998355 – Transferring Task IDs from FCC LA Contextual Monitoring to ECM
+
+Story:
+As a user, I want Task IDs created in FCC LA Contextual Monitoring to be transferred and reflected in ECM for each corresponding event, so that Task-level traceability and validation can be achieved across systems.
+
+Details:
+	•	For each batch of events sent from FCC LA Contextual Monitoring to ECM, a Task ID must be generated and associated with the case.
+	•	The corresponding Task URL should be uniquely identified and validated in ECM.
+	•	These Task URLs for the cases should be sent to MI (Management Information) teams for tracking.
+	•	ECM should not mark the record as complete until the full feed for each batch is validated against the number of Task IDs created.
+	•	A handshake validation must happen to ensure that each Task ID sent from FCC LA is reflected correctly in ECM.
+
+Acceptance Criteria:
+	•	Task ID must be created and assigned in ECM for every case.
+	•	Task ID mapping should be validated in ECM UI and backend logs.
+	•	Batch-level reporting must confirm inclusion of Task ID and synchronization status.
+
+⸻
+
+Story 7940803 – ECM to FCC LA Contextual Monitoring: Event Holdback Countries
+
+Story:
+As a system owner, I want ECM to send event and case details, including auto-closure flags, to FCC LA Contextual Monitoring for designated holdback countries, so that further contextual enrichment can be enabled.
+
+Details:
+	•	ECM should push all events and cases, irrespective of status, along with auto-closure flag details.
+	•	Data will be transferred via JDBC / FILE / IT connection.
+	•	This integration is an adaptation of the existing ECM-to-FCC LA feed via EDMP T1.
+	•	Quantexa will enrich the contextual data post-ingestion.
+	•	Handshake mechanism must confirm successful data transfer for each batch.
+	•	Any recon failures must be logged and notified via monitoring tools.
+
+Acceptance Criteria:
+	•	ECM must send feed in the expected format with full data completeness.
+	•	FCC LA must ingest and log received records with batch tracking.
+
+⸻
+
+Story 8040392 – ECM to FCC LA Contextual Monitoring: Event Pass-through Countries
+
+Story:
+As a system owner, I want ECM to send all events and case data, including auto-closure flags, to FCC LA Contextual Monitoring for non-holdback countries, to allow real-time contextual monitoring and scoring.
+
+Details:
+	•	Similar to Story 7940803 but applicable to non-holdback/pass-through countries.
+	•	ECM must send complete event and case data, regardless of current status, including closure flags.
+	•	Data transfer occurs via JDBC / FILE / IT on a scheduled daily basis.
+	•	Quantexa will handle data enrichment once received.
+	•	Each batch should go through a handshake validation and recon process.
+
+Acceptance Criteria:
+	•	ECM must send data with proper format and complete records.
+	•	FCC LA must ingest and log data with batch validation and tracking.
+
+⸻
+
+Story 7999287 – Displaying Task Metadata in ECM UI
+
+Story:
+As a user, I want newly created task metadata such as Task IDs, URLs, scores, and rule descriptions from Quantexa to be displayed for each case in ECM, so that users can easily reference detailed context.
+
+Details:
+	•	For every case created in ECM, task metadata from Quantexa (Task ID, Task URL, scores, rule descriptions, and auto-closure flag) must be retrieved and displayed.
+	•	This metadata is tied to the existing CASE workflow in ECM and should not alter it.
+	•	The auto-closure flag must be filterable and used for downstream analysis.
+	•	UI display should be responsive and access-controlled.
+	•	Metadata should be searchable and properly mapped.
+
+Acceptance Criteria:
+	•	UI must display task metadata against all relevant ECM cases.
+	•	Task ID must be visible, searchable, and correctly mapped.
+	•	UI must support responsiveness and enforce access control.
