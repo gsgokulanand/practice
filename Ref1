@@ -1,0 +1,16 @@
+This feature computes the maximum number of credit transactions between external counterparty name pairs. It includes both:
+	•	Primary beneficiaries where originator account and augmentation name are present, and internal flags are not set.
+	•	Secondary beneficiaries identified by secondary originator details and exclusion of internal flows.
+
+The logic is applied on data from WIRE_TRXN and MI_TRXN, with union of both beneficiary types. Grouping is done by external party name combinations to detect high-frequency counterparties.
+
+⸻
+
+🔁 Pseudo Logic (Concise & Clear):
+MAX count(*) 
+FROM (
+  UNION of:
+    - Primary: valid orig_acct_id + orig_aug_nm, not internal
+    - Secondary: valid scnd_orig_acct_id + SCND_ORIG_AUG_NM, not internal
+)
+GROUP BY (cdt_cntr_party_nm_ext, cdt_scnd_cntr_party_nm_ext)
