@@ -1,0 +1,14 @@
+This feature measures the average debit transaction amount per external entity pair, covering both primary and secondary beneficiaries from MI_TRXN and WIRE_TRXN data sources.
+
+It filters for valid beneficiary account and augmentation details while excluding internal transactions. Transactions are grouped by external party name combinations. The final value is calculated as:
+
+Total Debit Transaction Amount ÷ Number of Unique External Entity Pairs
+
+This metric helps identify customers with high-value debit relationships across a wide or narrow external network.
+
+AVG_DEBIT_AMT_PER_PAIR = 
+SUM(debit_txn_amt) / COUNT(DISTINCT (dbt_cntr_party_nm_ext, dbt_scnd_cntr_party_nm_ext))
+
+FROM union of:
+  - Primary & Secondary Beneficiaries from MI_TRXN and WIRE_TRXN
+  - With valid acct_id, aug_nm, and non-internal flags
