@@ -1,0 +1,6 @@
+Common unified CDD schema is reviewed and finalized with business and technical stakeholders.
+	•	Mapping from all 9 BA systems is completed and documented.
+	•	At least 2 sample batches are successfully processed for validation in non-prod.
+	•	Gaps in data availability or quality are flagged with remediation plan.
+	•	All CDD fields required for scoring models in Quantexa are confirmed as ingestible.
+	•	Recon and lineage mechanisms are defined for tracking CDD record usage.
