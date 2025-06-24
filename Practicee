@@ -1,0 +1,30 @@
+
+Source System
+Description
+1
+iCDD BA
+Core customer profile
+2
+DCUBE BA
+Supplementary data
+3
+CuPID II BA
+Detokenized KYC data
+4
+Individual Client Master BA
+Static personal identifiers
+5
+SCI BA
+Security classification info
+6
+ClientCentral BA
+Central KYC consolidation
+7
+EBBS
+Banking system CDD
+8
+Moody’s Orbis
+Corporate registry
+9
+Veritas
+Internal & external watchlists
