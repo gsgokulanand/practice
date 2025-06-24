@@ -1,0 +1,24 @@
+Column
+Purpose
+Source System
+iCDD, D-Cube, Client Central, Veritas, BvD
+Primary Table Identified?
+Yes/No – used to identify the base table
+Supporting Tables (if any)
+Capture any lookup or relationship tables
+Unified Field Name
+As expected in the final Quantexa schema
+Source Column Name
+Actual column name in source system
+Transformation Needed?
+Yes/No
+Transformation Logic
+E.g., Convert “Low/Med/High” → numeric
+Duplicate Across Systems?
+Yes/No
+Preferred Source (If Duplicate)
+Quantexa preference
+MoSCoW Priority (from Quantexa)
+Must/Should/Could
+BA Notes
+For open questions, follow-ups, etc.
