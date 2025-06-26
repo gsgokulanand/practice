@@ -1,0 +1,7 @@
+Upon further review of the customer data projected under the Private Banking segment (totaling 33,315 customers), we would like to clarify that this figure represents the global Private Banking customer base.
+
+However, as per the transaction monitoring and customer activity review, none of these customers have had any active transactions in the past 13 months under the VN country segment. Given this inactivity, these customers do not fall under the scope of the current retuning exercise.
+
+We recommend excluding them from the tuning population for Vietnam, as their inclusion would not contribute meaningfully to the detection logic at this stage.
+
+Please let us know if you need further supporting data or validation.
