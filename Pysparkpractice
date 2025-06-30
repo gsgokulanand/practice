@@ -1,0 +1,6 @@
+From these, we’ve currently focused on the Account domain and mapped the relevant CDD columns using MANTAS as the source system. We’ve also included CDEs based on the FCCLA mapping to align both views.
+
+Our next step is to walk through this mapping sheet together and validate all the CDD fields required for both FCCLA and Contextual Monitoring use cases.
+Further analysis may be needed to identify and source missing fields from other systems if not available in MANTAS.
+
+Request everyone to kindly review the file and be ready to discuss in the upcoming sync.
