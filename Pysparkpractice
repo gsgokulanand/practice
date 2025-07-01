@@ -1,9 +1,7 @@
-import
+As part of the Catalyst Migration Program, we’re running integration tests ahead of the migration freeze on 19 July and the cut-over on 16 August.
 
+Could you please upload a recently modified sample parameter or watchlist file via MFU to the designated NAS path on the new green server?
 
+After the upload, kindly coordinate with Madhu so she can confirm the file’s presence and report back.
 
- 
-
-ly.
-
-ur side.
+Please let us know once the file is in place, or if you need any additional details.
