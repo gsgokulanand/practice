@@ -1,1 +1,14 @@
+This EPIC encompasses various Business-As-Usual (BAU) activities and minor technical enhancements planned over the next one year within the FSS AML system. The scope is designed to ensure continued operational stability, compliance, and efficiency across the platform. Activities under this EPIC include:
+	1.	Ongoing BAU Enhancements:
+	•	Regular threshold file updates following post-tuning and BTL activities.
+	•	Minor performance tuning exercises such as normalization adjustments in the base module to improve processing efficiency.
+	2.	Catalyst Migration Support:
+	•	Although the core E2E implementation of Catalyst changes is completed on the green server, certain minor activities are anticipated, such as:
+	•	Enabling/validating file permissions.
+	•	Modifying table properties as required by ECM standards.
+	•	Enabling version control for key configuration parameters.
+	3.	Ad-Hoc Production Fixes:
+	•	Provision to include and respond to unforeseen issues such as failures in production jobs.
+	•	Apply quick resolutions to ensure continuity of monitoring and minimal business impact.
 
+This EPIC will serve as a central tracker for all minor but essential technical changes, maintenance items, and production-level resolutions within the FSS AML ecosystem for the calendar year.
