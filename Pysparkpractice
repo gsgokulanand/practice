@@ -1,1 +1,22 @@
 
+Hi Sowmya,
+
+Thanks for your response.
+
+As highlighted in EPIC 8796298, below is the revised implementation plan and key asks for Egypt and Saudi Arabia:
+
+⸻
+
+🔹 Environment & Timeline Plan
+	•	Sandbox Setup – Target: Early Q3 2025
+	•	Critical for testing, tuning, and UAT sign-off
+	•	Effort expected: 2–3 months, factoring in Catalyst migration
+	•	Production data for Egypt will be available by mid-July, which can be used for sandbox testing
+	•	This setup was also used during Phase 2B testing and is considered part of the current change scope
+	•	Production Setup – Target: Early Q4 2025
+	•	Planned post-UAT sign-off for final deployment
+
+⸻
+
+Kindly prioritize sandbox provisioning to avoid delays and ensure a smooth implementation.
+Also, please confirm if these timelines should be updated in the ADO Epic.
