@@ -1,1 +1,46 @@
 
+1. Purpose of the Change:
+
+“This change request is raised to support data migration from MANTAS AML Production to the PROD Sandbox environment. It’s primarily required for downstream analysis and reference in sandbox environments for 9 country datasets.”
+
+2. Scope of Data:
+
+“We are migrating 5 key tables relevant to the KDD module:
+	•	KDD_BREAK_BINDING
+	•	KDD_BREAK_MTCHS
+	•	KDD_PTTRN
+	•	KDD_REVIEW
+	•	KDD_SCNRO
+covering 9 countries: AE, DE, KE, GB, HK, NG, SG, MY, US.”
+
+3. Data Volume and Duration:
+
+“Data extraction will cover a 3-year window:
+from 30 June 2022 to 30 June 2025,
+based on prcsng_dt filters applied during the query execution in AIG script.”
+
+4. Execution Plan:
+
+“We will execute SQL queries with spool enabled to generate .DAT files for each table and country-specific view. This has already been scripted and tested in AIG.”
+
+5. File Transfer Plan:
+
+“The .DAT files will be securely copied from the local application server to the NAS destination path:
+
+/CTRLFW/FCC_DM/sandbox/FCSO_CM
+
+on the sandbox server hklpaphaa010.global.standardchartered.com.”
+
+6. Validation & Safeguards:
+
+“We have incorporated row count validation and checks for zero-byte files before copying.
+We’ll also log the count of records extracted per view per country to ensure completeness.”
+
+7. Impact Assessment:
+
+“This is a non-intrusive read-only activity on MANTAS AML Prod data. No write operations or DDL changes are involved.
+Data extraction will happen during off-peak hours to avoid performance impact.”
+
+8. Rollback Plan:
+
+“As it’s a read-only data pull, no rollback is required. In case of error during file generation or copy, the process can be rerun for individual views.”
