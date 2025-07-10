@@ -1,1 +1,118 @@
-import sys
+🔴 1. N_CUST_AGE
+
+Business Requirement:
+To flag cases where a customer uses an account for a short period. Younger customers (newly opened accounts) may pose a higher risk compared to seasoned customers.
+
+Technical Specification:
+This flag compares the age of the customer’s account with the scenario execution date to identify new or recently onboarded customers.
+
+Feature Pseudo Logic:
+CUST_AGE = cust_dt_diff (cust_act_dt - scenario_execution_date)
+
+⸻
+
+🔴 2. TOTAL_AMT_IP_ZSCORE
+
+Business Requirement:
+To detect transaction behavior not aligned with a client’s declared nature of business or occupation.
+
+Technical Specification:
+Calculates the Z-score on inward personal (IP) transactions and compares it against the average and standard deviation of past 12 months’ transactions.
+
+Feature Pseudo Logic:
+IP_ZSCORE = (N_TOT_TRXN_AM_N - N_AVG_TRXN_AM_IP) / N_SD_TRXN_AM_IP
+
+⸻
+
+🔴 3. TOTAL_AMT_LM
+
+Business Requirement:
+Identify clients whose current transaction volumes significantly exceed their historical limits.
+
+Technical Specification:
+This flag captures the highest transaction value for the customer and compares it with their monthly average over the last 12 months.
+
+Feature Pseudo Logic:
+TOTAL_AMT_LM = (N_TOT_TRXN_AM - N_LM_TRXN_AM_IP) / N_SD_TRXN_AM_IP
+
+⸻
+
+🔴 4. WIRE_AMT_IP_ZSCORE
+
+Business Requirement:
+To identify unusual wire transaction patterns from individuals (IP) compared to expected norms.
+
+Technical Specification:
+Calculates the Z-score for inward/outward wire transactions (IP type), derived from WIRE_TRXN_AM tables.
+
+Feature Pseudo Logic:
+WIRE_IP_ZSCORE = (N_WIRE_TRXN_AMT - N_AVG_WIRE_TRXN_AMT_IP) / N_SD_WIRE_TRXN_AM_IP
+
+⸻
+
+🔴 5. WM_LM
+
+Business Requirement:
+To detect frequent or substantial wire transfers inconsistent with client’s business/occupation.
+
+Technical Specification:
+Compares the total current month wire transfer volume against last month’s values and computes deviation.
+
+Feature Pseudo Logic:
+WM_LM = (N_TOT_CR_TRXN_AM - N_TOT_DR_TRXN_AM)
+
+⸻
+
+🔴 6. COT_DEBT_RATIO
+
+Business Requirement:
+To monitor clients receiving funds from offshore entities and spending them on high-value purchases like luxury items.
+
+Technical Specification:
+Calculates the ratio of incoming funds vs outflows toward flagged categories (like purchases).
+
+Feature Pseudo Logic:
+DEBT_RATIO = ROUND((OUTFLOW/INCOME)*100, 2)
+
+⸻
+
+🔴 7. N_SD_TRXN_AM_IP
+
+Business Requirement:
+To assess standard deviation in monthly inward transaction amounts from personal accounts over past 12 months.
+
+Technical Specification:
+Uses standard deviation to highlight abnormal variations in monthly incoming IP transaction amounts.
+
+🔴 8. N_WIRE_TRXN_AMT
+
+Business Requirement:
+To detect high-value wire transactions (sent or received) within the lookback period. Larger values may require scrutiny.
+
+Technical Specification:
+Sums up wire transaction values across the lookback window.
+
+Feature Pseudo Logic:
+
+🔴 9. N_SD_WIRE_TRXN_CT_IP
+
+Business Requirement:
+To evaluate consistency or abnormal spikes in the count of wire transactions from personal accounts.
+
+Technical Specification:
+Uses standard deviation on wire transaction count over 12 months to find irregularities.
+
+Feature Pseudo Logic:
+
+🔴 10. RATIO (R = N_TOT_CR_TRXN_AM - N_TOT_DR_TRXN_AM)
+
+Business Requirement:
+To identify imbalance between credits and debits; large mismatches could indicate suspicious account behavior.
+
+Technical Specification:
+Subtracts total debit transaction amount from total credit to get net movement.
+
+Feature Pseudo Logic:
+RATIO = (N_TOT_CR_TRXN_AM - N_TOT_DR_TRXN_AM)
+
+
