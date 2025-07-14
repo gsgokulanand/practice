@@ -1,0 +1,25 @@
+GTMS & FCSO Red Flag - N_MI_TRXN_AMT
+
+Business Requirement:
+To detect the total amount of MI transactions (Money Inflow) either sent or received by the focal entity within the lookback period. A higher transaction value could be indicative of anomalous inflows or outflows and may warrant closer inspection for potential layering or integration activities.
+
+Technical Specifications:
+The metric computes the sum of MI transaction amounts within the lookback window. It aggregates all received or sent values from relevant channels, focusing on high-volume movement that deviates from normal patterns.
+
+Feature Pseudo Logic:
+Sum of trxn_rptng_amt on trxn_func_am or trxn_base_am based on user input for total MI transaction for given focus (MI_TRXN)
+(Aggregation of transaction values for MI channel for a focal customer over the period.)
+
+⸻
+
+GTMS & FCSO Red Flag - N_MI_TRXN_DEBT_CT
+
+Business Requirement:
+To identify the number of MI (Money Inflow) debit-side transactions sent by the focal entity. A higher number of outbound MI transactions may signal anomalous patterns related to structuring or distribution of funds.
+
+Technical Specifications:
+Counts the total number of MI transactions initiated on the debit/remitter side for a focal customer. This helps in identifying customers with high outgoing activity via MI channels.
+
+Feature Pseudo Logic:
+Count of trxn_seq_id for MI transaction of debit/Remitter side for given focus.
+(MI_TRXN)
