@@ -1,2 +1,29 @@
+from pyspark.sql import SparkSession, DataFrame
+from pyspark.sql.types import StructType, StructField, StringType, DoubleType
+from pyspark.sql.functions import col, avg, abs as abs_
 
-   import sys
+class PySparkJob:
+
+    def init_spark_session(self) -> SparkSession:
+        return SparkSession.builder \
+            .appName("Faulty Plants Detection") \
+            .master("local") \
+            .getOrCreate()
+
+    def read_csv(self, input_path: str) -> DataFrame:
+        schema = StructType([
+            StructField("plantId", StringType(), True),
+            StructField("temperature", DoubleType(), True)
+        ])
+        return self.init_spark_session().read.csv(input_path, header=False, schema=schema)
+
+    def calc_average_temperature(self, observed: DataFrame) -> DataFrame:
+        return observed.groupBy("plantId").agg(avg("temperature").alias("temperature"))
+
+    def find_faulty_plants(self, avg_observed: DataFrame, required: DataFrame) -> DataFrame:
+        joined_df = avg_observed.join(required, on="plantId")
+        faulty_df = joined_df.filter(abs_(joined_df["temperature_x"] - joined_df["temperature_y"]) >= 5)
+        return faulty_df.select(col("plantId"), col("temperature_x").alias("temperature"))
+
+    def save_as(self, data: DataFrame, output_path: str) -> None:
+        data.write.csv(output_path, mode="overwrite", header=False)
