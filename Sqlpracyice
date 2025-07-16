@@ -1,0 +1,13 @@
+SELECT 
+    a.email,
+    COUNT(r.output) AS outputs,
+    SUM(LENGTH(TRIM(r.output)) - LENGTH(REPLACE(TRIM(r.output), ' ', '')) + 1) AS total_words,
+    ROUND(AVG(LENGTH(TRIM(r.output)) - LENGTH(REPLACE(TRIM(r.output), ' ', '')) + 1), 2) AS avg_words_per_output
+FROM 
+    accounts a
+JOIN 
+    results r ON a.id = r.account_id
+GROUP BY 
+    a.email
+ORDER BY 
+    a.email;
