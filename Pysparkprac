@@ -1,7 +1,14 @@
-# Make 'plants' available for import in test_pipeline.py
+# Expose 'plants' DataFrame for unit testing
+from pathlib import Path
+
 if __name__ != "__main__":
     job = PySparkJob()
-    observed = job.read_csv("data/plants_observed_temp.csv")
-    required = job.read_csv("data/plants_required_temp.csv")
+    base_path = Path(__file__).resolve().parents[3]  # Go up 3 levels to project root
+
+    observed_path = str(base_path / "data/plants_observed_temp.csv")
+    required_path = str(base_path / "data/plants_required_temp.csv")
+
+    observed = job.read_csv(observed_path)
+    required = job.read_csv(required_path)
     avg_observed = job.calc_average_temperature(observed)
     plants = job.find_faulty_plants(avg_observed, required)
