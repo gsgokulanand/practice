@@ -1,0 +1,46 @@
+WITH process_duration AS (
+    SELECT
+        p.task_id,
+        t.hash,
+        p.start_dt,
+        p.end_dt,
+        TIMESTAMPDIFF(SECOND, p.start_dt, p.end_dt) AS duration,
+        ROW_NUMBER() OVER () AS row_id
+    FROM processes p
+    JOIN tasks t ON t.id = p.task_id
+),
+parallel_check AS (
+    SELECT
+        a.task_id,
+        a.hash,
+        a.start_dt,
+        a.end_dt,
+        a.duration,
+        a.row_id,
+        CASE 
+            WHEN EXISTS (
+                SELECT 1
+                FROM process_duration b
+                WHERE a.task_id = b.task_id
+                  AND a.row_id <> b.row_id
+                  AND a.start_dt < b.end_dt
+                  AND b.start_dt < a.end_dt
+            ) THEN 1 ELSE 0
+        END AS is_parallel
+    FROM process_duration a
+),
+final_agg AS (
+    SELECT
+        hash,
+        COUNT(*) AS processes,
+        SUM(is_parallel) AS total_parallel_processes,
+        SUM(duration) AS total_usage_time,
+        ROUND(SUM(
+            CASE WHEN is_parallel = 1 THEN duration * 0.02 ELSE duration * 0.01 END
+        ), 2) AS total_cost
+    FROM parallel_check
+    GROUP BY hash
+)
+SELECT *
+FROM final_agg
+ORDER BY hash; 
