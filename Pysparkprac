@@ -1,1 +1,7 @@
-impoet sys
+# Make 'plants' available for import in test_pipeline.py
+if __name__ != "__main__":
+    job = PySparkJob()
+    observed = job.read_csv("data/plants_observed_temp.csv")
+    required = job.read_csv("data/plants_required_temp.csv")
+    avg_observed = job.calc_average_temperature(observed)
+    plants = job.find_faulty_plants(avg_observed, required)
