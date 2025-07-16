@@ -1,13 +1,1 @@
-def find_faulty_plants(self, avg_observed: DataFrame, required: DataFrame) -> DataFrame:
-    # Rename temperature columns to distinguish them
-    avg_observed = avg_observed.withColumnRenamed("temperature", "observed_temp")
-    required = required.withColumnRenamed("temperature", "required_temp")
-
-    # Join both DataFrames on plantId
-    joined_df = avg_observed.join(required, on="plantId")
-
-    # Filter based on absolute temperature difference >= 5
-    faulty_df = joined_df.filter(abs_(col("observed_temp") - col("required_temp")) >= 5)
-
-    # Return only plantId and observed_temp
-    return faulty_df.select(col("plantId"), col("observed_temp").alias("temperature"))
+impoet sys
