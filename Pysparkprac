@@ -1,29 +1,13 @@
-import sys
-from main.job.pipeline import PySparkJob
+def find_faulty_plants(self, avg_observed: DataFrame, required: DataFrame) -> DataFrame:
+    # Rename temperature columns to distinguish them
+    avg_observed = avg_observed.withColumnRenamed("temperature", "observed_temp")
+    required = required.withColumnRenamed("temperature", "required_temp")
 
-def main():
-    job = PySparkJob()
+    # Join both DataFrames on plantId
+    joined_df = avg_observed.join(required, on="plantId")
 
-    # Load input data to DataFrame
-    print("<<Reading>>")
-    observed = job.read_csv(sys.argv[1])
-    required = job.read_csv(sys.argv[2])
+    # Filter based on absolute temperature difference >= 5
+    faulty_df = joined_df.filter(abs_(col("observed_temp") - col("required_temp")) >= 5)
 
-    # Compute average observed temperature
-    print("<<Avg Observed Temperature>>")
-    avg_observed_temp = job.calc_average_temperature(observed)
-    avg_observed_temp.show()
-
-    # Get faulty plants
-    print("<<Faulty Plants>>")
-    faulty_plants = job.find_faulty_plants(avg_observed_temp, required)
-    faulty_plants.show()
-
-    # Store faulty plants to file
-    print("<<Save Faulty Plants>>")
-    job.save_as(faulty_plants, sys.argv[3])
-
-    job.init_spark_session().stop()
-
-if __name__ == "__main__":
-    main()
+    # Return only plantId and observed_temp
+    return faulty_df.select(col("plantId"), col("observed_temp").alias("temperature"))
