@@ -1,1 +1,45 @@
-import sys
+WITH process_durations AS (
+    SELECT 
+        p.task_id,
+        t.hash,
+        TIMESTAMPDIFF(SECOND, p.start_dt, p.end_dt) AS duration,
+        p.start_dt,
+        p.end_dt
+    FROM processes p
+    JOIN tasks t ON p.task_id = t.id
+),
+process_with_parallel_flags AS (
+    SELECT 
+        a.task_id,
+        a.hash,
+        a.start_dt,
+        a.end_dt,
+        a.duration,
+        CASE 
+            WHEN EXISTS (
+                SELECT 1
+                FROM process_durations b
+                WHERE a.task_id = b.task_id
+                  AND a.start_dt < b.end_dt
+                  AND a.end_dt > b.start_dt
+                  AND (a.start_dt != b.start_dt OR a.end_dt != b.end_dt)
+            )
+            THEN 1 ELSE 0
+        END AS is_parallel
+    FROM process_durations a
+),
+aggregated AS (
+    SELECT 
+        hash,
+        COUNT(*) AS processes,
+        SUM(is_parallel) AS total_parallel_processes,
+        SUM(duration) AS total_usage_time,
+        ROUND(SUM(
+            duration * CASE WHEN is_parallel = 1 THEN 0.02 ELSE 0.01 END
+        ), 2) AS total_cost
+    FROM process_with_parallel_flags
+    GROUP BY hash
+)
+SELECT *
+FROM aggregated
+ORDER BY hash;
