@@ -1,29 +1,29 @@
-from pyspark.sql import SparkSession, DataFrame
-from pyspark.sql.types import StructType, StructField, StringType, DoubleType
-from pyspark.sql.functions import col, avg, abs as abs_
+import sys
+from main.job.pipeline import PySparkJob
 
-class PySparkJob:
+def main():
+    job = PySparkJob()
 
-    def init_spark_session(self) -> SparkSession:
-        return SparkSession.builder \
-            .appName("Faulty Plants Detection") \
-            .master("local") \
-            .getOrCreate()
+    # Load input data to DataFrame
+    print("<<Reading>>")
+    observed = job.read_csv(sys.argv[1])
+    required = job.read_csv(sys.argv[2])
 
-    def read_csv(self, input_path: str) -> DataFrame:
-        schema = StructType([
-            StructField("plantId", StringType(), True),
-            StructField("temperature", DoubleType(), True)
-        ])
-        return self.init_spark_session().read.csv(input_path, header=False, schema=schema)
+    # Compute average observed temperature
+    print("<<Avg Observed Temperature>>")
+    avg_observed_temp = job.calc_average_temperature(observed)
+    avg_observed_temp.show()
 
-    def calc_average_temperature(self, observed: DataFrame) -> DataFrame:
-        return observed.groupBy("plantId").agg(avg("temperature").alias("temperature"))
+    # Get faulty plants
+    print("<<Faulty Plants>>")
+    faulty_plants = job.find_faulty_plants(avg_observed_temp, required)
+    faulty_plants.show()
 
-    def find_faulty_plants(self, avg_observed: DataFrame, required: DataFrame) -> DataFrame:
-        joined_df = avg_observed.join(required, on="plantId")
-        faulty_df = joined_df.filter(abs_(joined_df["temperature_x"] - joined_df["temperature_y"]) >= 5)
-        return faulty_df.select(col("plantId"), col("temperature_x").alias("temperature"))
+    # Store faulty plants to file
+    print("<<Save Faulty Plants>>")
+    job.save_as(faulty_plants, sys.argv[3])
 
-    def save_as(self, data: DataFrame, output_path: str) -> None:
-        data.write.csv(output_path, mode="overwrite", header=False)
+    job.init_spark_session().stop()
+
+if __name__ == "__main__":
+    main()
