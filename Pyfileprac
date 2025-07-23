@@ -1,13 +1,1 @@
-Hi Mohamad,
-
-Please find my inline response below:
-	•	Third-party involvement in any of the phases? – No
-	•	Location of the processing and implementation? – Deployment and testing will be done in India; however, PMM users from Singapore will perform the data assessment.
-	•	Whether it is a cloud or physical data or implementing centre/location? – The data will be stored on on-premise servers.
-	•	Locations of data processing: – India and Singapore
-
-Please note that after the Implementation Phase, the threshold parameters and high-risk jurisdiction watchlist files will be updated by the PMM team based in India. Additionally, once every two years, the tuning activity will be performed by the SPOT team from India.
-
-As the transactional monitoring for MANTAS AML (CASA) is already live, the same level of data sovereignty rules will be applied for FSS AML as well.
-
-Also, please note that SAR file information is completely restricted and only accessible to relevant entities, excluding Saudi.
+import sys
