@@ -1,1 +1,5 @@
-import sys
+Good day!
+
+The FSS securities services batch failed at the ECM end due to the following unique constraint check: two inconsistent building number values (933 and null) were populated for 2 transactions (ZASCAPAY2098056 and ZASCAPAY8122156). These building number values were sourced from the MANTAS_WIRE_TXN source table.
+
+Please confirm the source of these new building number values and verify whether this field is correct. Based on your confirmation, we will propose a solution to address this issue—either at the source end or by modifying the ECM code base condition check.
