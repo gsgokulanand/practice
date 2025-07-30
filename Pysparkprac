@@ -1,11 +1,1 @@
-Hi Gary,
-
-Thanks for your confirmation on the data.
-
-We are sourcing this transactional data from the MANTAS WIRE_TRXN source table, which captures event transaction information. This is used to populate the transnational data into the ecm_STG_TRXN_OFFICE_TXN_PARTY table, based on the mapping provided by the ECM team.
-
-In this instance, the building number values were rolled out newly for BENE and ORG roles. However, for RCV and SEND institution roles, no such building number value is available in the MANTAS source. As a result, we are populating these as null.
-
-In ECM, there is a unique constraint check, which causes the job to fail due to two inconsistent building number values within the party roles of the same transaction.
-
-We have requested the ECM team to remove this unique constraint check. However, we just wanted to check the legitimacy of this value population with you.
+inport sys
