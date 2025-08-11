@@ -1,1 +1,16 @@
-import sys
+Story Description – Data Loading into CXTM Layer
+
+Once source system data extraction is complete, load the data into the CXTM layer write schema tables.
+This involves mapping extracted fields to target table structures, applying required transformations, and validating completeness before handing over for downstream consumption.
+
+⸻
+
+Acceptance Criteria – Data Loading to CXTM Layer
+	1.	Target write schema tables created/updated as per approved data model.
+	2.	Field mapping from source to target completed and documented.
+	3.	Data loaded successfully with all mandatory fields populated.
+	4.	Transformations applied as per business rules.
+	5.	Row counts and control totals match between source extraction and CXTM load.
+	6.	No data truncation, format mismatch, or type errors.
+	7.	Load logs captured, stored, and reviewed for errors.
+	8.	Sign-off obtained from Data/QA teams after validation.
