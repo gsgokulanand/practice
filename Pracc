@@ -1,6 +1,24 @@
-Scripts developed as per approved requirements, covering all business rules and mappings.
-	2.	Code reviewed, approved, and error-free.
-	3.	Successfully deployed in SIT with no impact on existing functionality.
-	4.	Documentation complete with scope, validation rules, test steps, and rollback plan.
-	5.	SIT testing passed with no high-severity defects; ready for UAT.
-	6.	Mock data prepared, covering normal, edge, and exception cases, and approved by QA/Data teams.
+1.	Script Completion
+	•	All scripts are fully developed according to approved technical specifications.
+	•	Logic covers all business rules, data mappings, and transformation requirements.
+	•	Code is clean, follows naming conventions, and has no syntax or compilation errors.
+	2.	Review & Approval
+	•	Peer review completed with no major defects.
+	•	Review sign-off obtained from the technical lead or architect.
+	•	Changes are traceable to the approved requirements.
+	3.	Deployment Readiness
+	•	Successfully deployed into the SIT environment without errors.
+	•	Deployment checklist completed and signed off.
+	•	No impact on existing functionalities confirmed.
+	4.	Documentation
+	•	System Test (ST) documentation is complete, covering scope, test data, execution steps, and rollback procedures.
+	•	Data validation rules and expected outputs are documented.
+	•	All relevant stakeholders have approved the document.
+	5.	Testing Completion
+	•	SIT team has executed all planned test cases.
+	•	Test results meet expected outcomes with no high-severity issues open.
+	•	UAT readiness confirmed.
+	6.	Data Preparation
+	•	Mock data prepared to simulate real production scenarios.
+	•	Covers normal, edge, and exception cases.
+	•	Verified and approved by QA/Data teams.
