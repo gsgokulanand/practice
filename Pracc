@@ -1,3 +1,6 @@
-inport sys 
-
-import pyspark 
+Scripts developed as per approved requirements, covering all business rules and mappings.
+	2.	Code reviewed, approved, and error-free.
+	3.	Successfully deployed in SIT with no impact on existing functionality.
+	4.	Documentation complete with scope, validation rules, test steps, and rollback plan.
+	5.	SIT testing passed with no high-severity defects; ready for UAT.
+	6.	Mock data prepared, covering normal, edge, and exception cases, and approved by QA/Data teams.
