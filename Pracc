@@ -1,2 +1,8 @@
-import sys
-import pyspark 
+Before I respond to Sridhar’s email on the ECM Epic/User story updates, I need your confirmation on the following points:
+	1.	SIT Scope – Exact ECM testing coverage.
+	2.	UAT Scope – For ECM + Quantexa integration.
+	3.	Market Count – How many markets will be covered?
+	4.	Regression Testing – Will regression be required for each phase (2 markets per phase)?
+	5.	Pre-Case Layer – Status of deployment readiness.
+	6.	UAT Ownership – Will it be Peter’s team or AA team?
+	7.	Rollout Plan – For 9 countries, how many phases are planned?
