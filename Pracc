@@ -1,1 +1,5 @@
 
+6. Additional Key Points
+	•	FCCLA UI Access Limitation: After cutover, FCCLA UI will only show data until Aug 31, 2025
+	•	Delta Batch Stop: On Aug 31, the FCCLA delta batch will be fully stopped, and no scoring will occur after this point
+	•	Decommissioning: If contextual monitoring implementation is successful, FCCLA UI will no longer be in use. If major outages occur, rollback will reinstate FCCLA without impacting subsequent batches
