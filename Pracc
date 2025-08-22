@@ -1,5 +1,2 @@
 
-Additional Points to Note:
-	1.	FCCLA UI data visibility: Data will only be available until August 31 (the cutover date).
-	2.	FCCLA batch processing: After this date, the FCCLA delta batch will be stopped, and no further scoring will occur in FCCLA.
-	3.	Decommissioning FCCLA UI: If contextual monitoring implementation is successful, the existing FCCLA UI will no longer be used. In case of any critical issues, the rollback plan (as discussed) will be triggered.
+import sys
