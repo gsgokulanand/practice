@@ -1,7 +1,1 @@
-Sandbox Batch Failure Due to Keytab Issue
-
-Hi Team,
-
-Please be informed that the sandbox batches are currently failing due to a keytab authentication issue. This is related to an infrastructure issue, and the recent change request was postponed due to an exceptional approval requirement from the PSS side.
-
-We are closely working with the PSS team to resolve this issue and resume the EG E2E batch. We plan to implement the required change with their assistance by Monday. We will keep you posted with updates.
+import sys
