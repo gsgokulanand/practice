@@ -1,1 +1,60 @@
-import sys
+FCCLA Cutover / Migration Phase Plan
+
+1. Pre-Cutover Preparation
+	•	Task: Freeze ongoing development/enhancements on legacy FCCLA (Link Analysis).
+	•	Task: Identify delta batches still in pipeline and agree on freeze date (T-XX days).
+	•	Task: Complete reconciliation of existing ECM cases (open investigations must remain in Mantas ECM).
+	•	Dependency: Ops / Compliance for confirmation of cases not to be migrated.
+	•	Deliverable: “Delta freeze & reconciliation sign-off” doc.
+
+⸻
+
+2. Infrastructure & Connectivity Readiness
+	•	Task: Confirm infra readiness for FCCLA CXM (per Qx recommendation).
+	•	Task: Validate new pipelines from contextual monitoring → Mantas AML → ECM.
+	•	Dependency: Infra/Cloud team for provisioning, Quantexa/Mantas Tech for interface validation.
+	•	Deliverable: Test evidence of end-to-end file transfer (scored events → Mantas → case creation).
+
+⸻
+
+3. Data Migration & Delta Handling
+	•	Task: Stop ingestion of deltas into legacy FCCLA at cutover T0.
+	•	Task: Redirect ingestion pipeline into FCCLA CXM.
+	•	Task: Validate first batch run in CXM for data completeness & accuracy.
+	•	Dependency: Batch Ops for schedule switch, Data Quality team for checks.
+	•	Deliverable: Reconciliation report of migrated vs expected counts.
+
+⸻
+
+4. Case Management Transition
+	•	Task: Ensure no open FCCLA Tasks are left in queue (must be cleared or documented).
+	•	Task: Redirect ECM case ingestion logic to contextual monitoring.
+	•	Dependency: Case Mgmt Ops for SLA handling, Compliance for approval.
+	•	Deliverable: Task/Case “zero pending items” certificate.
+
+⸻
+
+5. Parallel Run & Validation
+	•	Task: Run contextual monitoring + legacy FCCLA in parallel (T0 → T+XX days).
+	•	Task: Compare alert volumes, SLA impact, false positives/negatives.
+	•	Dependency: Ops MI team for reporting, Risk Policy team for validating thresholds.
+	•	Deliverable: Parallel run validation report.
+
+⸻
+
+6. Go-Live & Hypercare
+	•	Task: Official switch-off of FCCLA (Link Analysis) post parallel run approval.
+	•	Task: Daily monitoring of contextual monitoring outputs during hypercare.
+	•	Task: Log and resolve post-cutover defects.
+	•	Dependency: FCCLA Support team + ITAM for escalation.
+	•	Deliverable: Hypercare dashboard & final sign-off.
+
+⸻
+
+✅ Key Milestones in Cutover Phase:
+	1.	Delta Freeze & Reconciliation (T-XX)
+	2.	Infra & Pipeline Validation (T-XX)
+	3.	Data Redirection to CXM (T0)
+	4.	First Batch Validation (T0+1)
+	5.	Parallel Run Completion (T+XX)
+	6.	Legacy FCCLA Decommission (T+YY)
