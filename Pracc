@@ -1,9 +1,1 @@
-Hi Peter,
-
-During today’s ECM batch load testing, we encountered an issue while pushing data from Spark/Hive to Oracle. The error is caused by certain records in the V_PROD_TYPE column exceeding the Oracle target column definition (VARCHAR2(20 CHAR)), which results in insert failures.
-
-To ensure the batch run completes successfully, we propose a tactical workaround:
-	•	Trim the V_PROD_TYPE field to 20 characters at the source itself during Spark processing.
-	•	This will align the data with the Oracle schema and allow the load to proceed without further errors.
-
-Requesting your approval to implement this trimming approach for the ECM batch run. Please confirm if we can proceed.
+import sys
