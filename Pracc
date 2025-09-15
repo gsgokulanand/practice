@@ -1,7 +1,9 @@
-•	T0 → The cutover/go-live date (the exact day when you switch from old system to new).
-	•	T–XX → Tasks that must be completed before go-live (XX = number of days before).
-	•	Example: T–7 = 7 days before cutover.
-	•	Example: T–1 = the day before cutover.
-	•	T+XX → Tasks that must be completed after go-live (XX = number of days after).
-	•	Example: T+1 = the day after cutover.
-	•	Example: T+30 = 30 days after go-live (common for post-implementation validation or hypercare closure).
+Hi Peter,
+
+During today’s ECM batch load testing, we encountered an issue while pushing data from Spark/Hive to Oracle. The error is caused by certain records in the V_PROD_TYPE column exceeding the Oracle target column definition (VARCHAR2(20 CHAR)), which results in insert failures.
+
+To ensure the batch run completes successfully, we propose a tactical workaround:
+	•	Trim the V_PROD_TYPE field to 20 characters at the source itself during Spark processing.
+	•	This will align the data with the Oracle schema and allow the load to proceed without further errors.
+
+Requesting your approval to implement this trimming approach for the ECM batch run. Please confirm if we can proceed.
