@@ -1,12 +1,1 @@
-Hi Jeyabalan,
-
-Thanks for the clarification.
-
-✔️ For the interim approach, we agree to proceed with trimming the problematic record(s) at source and reloading into ECM.
-
-✔️ For the permanent approach, business has concurred that trimming will be the standard, and we will raise a CR/ADO to ECM to formalize this.
-
-Request you to please resume the failure batches (Tradeport and SS) once the fix is confirmed with CR implementation at the end of this cycle.
-
-Thanks & Regards,
-Gokul
+import sysy
