@@ -1,11 +1,1 @@
-Hi Vimala,
-
-During the data assessment exercise for Taiwan, we observed that the total settled secure trade count for a month is 74,204, whereas for Hong Kong the count is 335,322. This means Taiwan’s secure trade count is approximately 78% lower than Hong Kong.
-
-Given this difference, we believe that 1 FTE will be sufficient for case investigation in Taiwan.
-
-For reference, please find attached the DQ assessment sheet along with the query results used for the analysis.
-
-Thanks,
-Gokul
-
+import sys
