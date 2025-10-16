@@ -1,1 +1,115 @@
-inport sys
+TM_Contextual Monitoring: Transaction Data Ingestion Enablement for FCC LA Contextual Monitoring – Oracle (Product Source)
+
+⸻
+
+Description
+
+Story:
+
+As a Contextual Monitoring stakeholder, I want the Oracle MANTAS product team to enable and expose transaction and event data from the MANTAS source layer for ingestion into FCC LA Contextual Monitoring, so that unified behavioral and relationship insights can be established across platforms.
+
+⸻
+
+Additional Description:
+	1.	The Oracle MANTAS product layer should enable the required data extracts and interface objects that can be consumed by the FCC LA Contextual Monitoring ingestion pipeline.
+	2.	The interface should expose the required MANTAS tables, attributes, and relationships (events, transactions, entities, and alerts) as per the unified data model agreed between the two systems.
+	3.	Data delivery should adhere to standardized schema definitions, SLAs, and validation rules to ensure readiness for contextual monitoring.
+	4.	The extracts must support both incremental and full loads, with error handling and reconciliation checks.
+	5.	Alignment with FCCM ingestion specifications must be maintained to ensure seamless downstream processing.
+
+⸻
+
+No. of Minimum Batches Expected:
+
+2 (1 for extract creation & testing, 1 for validation or issue fixing if required per Market)
+
+⸻
+
+Acceptance Criteria
+	•	Required MANTAS tables and attributes are exposed and accessible for FCC LA Contextual Monitoring ingestion.
+	•	Extracts and interface objects are successfully validated for completeness, field accuracy, and record volume.
+	•	Data flow from MANTAS source to the FCC LA ingestion layer is successfully triggered and verified.
+	•	End-to-end validation confirms compliance with SLA, schema mapping, and data readiness requirements.
+
+⸻
+
+Release Notes
+
+Oracle MANTAS product team to enable transaction and event data extracts for FCC LA Contextual Monitoring pipeline connectivity.
+
+-------------
+
+TM_Contextual Monitoring: BAU Data Pipeline Enablement from MANTAS (Oracle Source) to FCC LA Contextual Monitoring
+
+⸻
+
+Description
+
+Story:
+As a MANTAS (Oracle) system owner, I want to enable data extracts from the MANTAS source layer to FCC LA Contextual Monitoring so that events and transactions data can be consumed for contextual behavior analysis as part of BAU.
+
+⸻
+
+Additional Description:
+	1.	The Oracle MANTAS product layer should enable and maintain the data interface objects required for downstream ingestion into FCC LA Contextual Monitoring.
+	2.	The extract logic and schema should remain consistent with BAU data flow currently used for MANTAS-to-ECM pipelines.
+	3.	The interface should support full and incremental loads with adherence to data readiness and SLA requirements.
+
+⸻
+
+No of minimum Batches Expected:
+2 (1 Processing and 1 Bug fixing if any per Market)
+
+⸻
+
+Acceptance Criteria
+	•	Data extracts from MANTAS (Oracle source) are successfully made available for ingestion into FCC LA Contextual Monitoring.
+	•	Schema, volume, and quality validation completed as per agreed BAU standards.
+	•	Data readiness and SLA compliance achieved across all active markets.
+
+⸻
+
+Release Notes
+
+Oracle MANTAS product interface enabled to support BAU data flow for FCC LA Contextual Monitoring ingestion.
+
+
+
+----------------------------------
+Story Title:
+
+TM_Contextual Monitoring: Enablement of Source Data Interface from Oracle MANTAS for FCC LA Contextual Monitoring Integration
+
+⸻
+
+Description
+
+Story:
+As a MANTAS (Oracle) source system owner, I want to enable and expose the required event and transaction data interfaces from MANTAS to FCC LA Contextual Monitoring so that contextual ingestion pipelines can consume standardized data for behavioral and entity-level analysis.
+
+⸻
+
+Additional Description:
+	1.	Oracle MANTAS source must make the required data tables and attributes (events, transactions, entities, relationships) available for FCC LA Contextual Monitoring ingestion.
+	2.	Interface should support both incremental and full data extraction modes aligned with BAU MANTAS–ECM data standards.
+	3.	Schema, data types, and table mappings must remain consistent with existing BAU feeds to ensure smooth integration and minimal rework.
+	4.	Extracts should include relevant keys (Event_ID, Entity_ID, Country, Source_System) for downstream traceability.
+	5.	Data readiness, completeness, and SLA adherence must be validated as part of the release cycle.
+
+⸻
+
+No of minimum Batches Expected:
+2 (1 Processing and 1 Bug fixing if any per Market)
+
+⸻
+
+Acceptance Criteria
+	•	Oracle MANTAS source successfully exposes required data extracts for FCC LA Contextual Monitoring ingestion.
+	•	Extract and schema validations are completed and approved by both Oracle product and Contextual Monitoring data teams.
+	•	Data quality and SLA checks pass across all pilot markets.
+
+⸻
+
+Release Notes
+
+Oracle MANTAS product interface enabled to provide standardized data feeds for FCC LA Contextual Monitoring ingestion.
