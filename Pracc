@@ -1,9 +1,1 @@
-Hi [Risk Owner’s Name],
-
-This change pertains to the Securities Services source system and is related to billing functionalities. Based on our assessment, the change does not impact trade settlement processes or client account-level AML monitoring.
-
-Accordingly, we believe there is no AML risk associated with this change.
-Kindly review and confirm the same from your end.
-
-Best regards,
-Gokul Anand
+import sys
