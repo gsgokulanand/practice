@@ -1,6 +1,1 @@
-Please find the key points from the Securities Services (source) team discussion for your confirmation:
-	1.	Existing settlement entries (delivery vs. receipt) will continue in the current secure system.
-	2.	The new ESS platform will generate billing and receivable entries going forward.
-	3.	Each invoice will post two entries – debit to sundry receivables and credit to the respective client/department account.
-	4.	Need confirmation if these ESS entries will replace or co-exist with current UT entries, and whether any additional monitoring or reconciliation controls are required during transition.
-	5.	Please also confirm that there is no AML risk or control impact arising from this change.
+import sys 
