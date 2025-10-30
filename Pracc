@@ -1,9 +1,1 @@
-As part of the FSS AML rollout for Egypt and Saudi Arabia, we have completed all key implementation activities including data assessment, configuration, end-to-end testing, and ECM integration readiness.
-
-However, due to very limited transactions at the source systems (Egypt – 0 transactions, Saudi Arabia – 7 transactions), we are currently unable to generate AML events and cases. This has impacted our ability to execute and close UAT and UVT activities at the ECM side.
-
-To ensure compliance with the regulatory commitments for both countries within this year, we are proposing to:
-	•	Proceed with the technical go-live as planned in November, incorporating the final approved thresholds and watchlist configurations.
-	•	Defer the business go-live (ECM scenario activation) until transactions start flowing from the source systems, expected early next year.
-
-We request your approval or clarification to proceed with this approach so we can plan the necessary activities accordingly.
+import sys
