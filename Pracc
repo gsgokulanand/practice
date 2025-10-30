@@ -1,1 +1,7 @@
-import sys 
+As per our analysis, all 44 transactions got settled in the UAE as the owner contract entity is GSSDC. For these transactions, kindly suggest when we can start getting the trade settlements in the GSSEG entity, so that the transactions will start flowing into the Egypt country batch and will get processed in the detected scenario.
+
+Currently, these transactions are being monitored in the UAE country batch.
+
+Attached is the list of 44 RDOs along with the corresponding owner contract entity.
+
+Also attached is a sample RDO (#121003702) that got settled in the September month batch, which is already in production. Kindly advise.
