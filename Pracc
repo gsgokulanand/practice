@@ -1,1 +1,84 @@
-import sys
+Subject: Finalized FSS AML KT Plan – Nov 17–21 & Nov 24–28
+
+Dear Team,
+
+Please find below the finalized 10-day Knowledge Transfer (KT) plan for the FSS AML sessions with the Korea Tech team.
+The KT will be jointly led by Gokul Anand (Product Owner) and Cynthia (Business Analyst).
+
+The sessions are structured to begin with business and architecture context, followed by data lineage, BAU and DQ discussions, and detailed detection scenario walkthroughs — ensuring alignment with the KR team’s current environment and processes.
+
+⸻
+
+📅 Duration: November 17–21 & November 24–28
+🧑‍💼 Facilitators: Gokul Anand & Cynthia
+
+⸻
+
+Day 1 – Business & System Overview
+Topic: (AM) Securities Services Business Overview / (PM) FSS AML Architecture Overview
+Owner: Gokul
+Focus: Business flow, AML components, and end-to-end system architecture.
+
+⸻
+
+Day 2 – Korea System Walkthrough
+Topic: KR System Architecture & Tools Overview
+Owner: KR Tech Team
+Focus: Understand KR environment, current architecture, and tool ecosystem.
+
+⸻
+
+Day 3 – Source Data & CDE Mapping
+Topic: KR Source Data Points and CDE Mapping Workshop
+Owner: Joint (KR + FSS Team)
+Focus: Review KR source data and align with FSS AML schema and lineage.
+
+⸻
+
+Day 4 – Data Lineage Deep Dive
+Topic: Source to Target Mapping
+Owner: Cynthia / Gokul
+Focus: End-to-end lineage for 25 detection scenarios and mapping validation.
+
+⸻
+
+Day 5 – BAU & Data Quality Discussion
+Topic: Common BAU Issues and Data Quality Framework
+Owner: Cynthia / Gokul
+Focus: Recurring BAU data challenges, DQ controls, and validation mechanisms.
+
+⸻
+
+Day 6 – TSD Review (Part 1)
+Topic: Detection Scenarios 1–10
+Owner: Gokul
+Focus: Scenario logic, parameters, config file setup, and job design overview.
+
+⸻
+
+Day 7 – TSD Review (Part 2)
+Topic: Detection Scenarios 11–20
+Owner: Gokul
+Focus: Detailed architecture flow and logic continuation.
+
+⸻
+
+Day 8 – TSD Review (Part 3)
+Topic: Detection Scenarios 21–25 + Q&A
+Owner: Gokul
+Focus: Wrap-up of detection logic, configuration, and clarifications.
+
+⸻
+
+Day 9 – Case Management Alignment
+Topic: ECM vs KR CM System (Half Day)
+Owner: Gokul / KR Team
+Focus: Integration points, alert assignment, and case closure comparison.
+
+⸻
+
+Day 10 – Tuning & Scenario Design
+Topic: Spot Tuning Process and Scenario Design Approach
+Owner: Gokul
+Focus: Tuning lifecycle and scenario design using GTMS and local rules.
+
