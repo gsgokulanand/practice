@@ -1,53 +1,5 @@
-Performance Review | 2025
-
-Performance and Achievements
-	•	Supported end-to-end testing for FSS AML new country rollouts (Saudi & Egypt) by organizing weekly/biweekly calls with country teams, driving concurrence on thresholds, HRG watchlists, and approvals. Ensured completion of DQA, SIT, and UAT ahead of tech go-live by year-end 2025 and tracked IGA completion for Saudi business go-live in Q1 2026.
-	•	Managed BTL segmentation, tuning, and BTG batch runs for TH, MY, VN, SG, AE, and HK. Coordinated with SPOT team for sample validation and execution within planned timelines.
-	•	Supported AA Investigation data preparation by providing customized event and transaction extracts for BTL team despite automation in place, ensuring timely closure of ad hoc requests.
-	•	Led AE Retuning (annual activity) for AE region — coordinated reporting, implemented Control-M regulatory changes to reduce case creation delays, and streamlined retuning efficiency.
-	•	Successfully coordinated funding closure for FSS AML rollouts (Korea, Taiwan, Saudi, Egypt) after multiple approvals and follow-ups for both BAU and tech budgets.
-	•	Supported Catalyst Migration testing and go-live with technology team, ensuring flawless migration through multiple validation cycles and DRA testing.
-	•	Handled critical batch and ECM data failures, performed impact analysis, and proposed long-term fixes for application and ECM layers to prevent recurrence.
-	•	Took complete ownership of Contextual Monitoring ADO governance, managing story creation, acceptance criteria, and stakeholder alignment with tech, testing, and business teams.
-	•	Created key project documentation — Validation Mechanism and Implementation Approach for Contextual Monitoring.
-	•	Led ECM–Quantexa integration by running frequent sync-ups with product owners, BAs, and tech teams to resolve dependencies and fast-track integration.
-	•	Provided BAU and environment support (SPOT and AA queries, new environment enablement for ATK and segmentation). Supported HashiCorp Vault onboarding, OneCert migration, and MLR 40 SIT/UAT completion with timely closure.
-	•	Regularly presented quarterly BRM/SRM updates, ran PWG calls, and contributed to BOW discussions with technology heads, highlighting progress and resource planning.
-
-⸻
-
-Goals and Deliverables Review
-	•	Delivered key country rollouts and retuning activities within agreed timelines.
-	•	Improved collaboration between business, tech, and operations through structured stakeholder connects.
-	•	Challenges included dependency on multiple systems (ECM, SPOT) and ad hoc country requirements, handled effectively through proactive follow-up and documentation.
-	•	All committed deliverables were completed; no major slippages reported.
-
-⸻
-
-Learning, Growth, and Skills
-	•	Strengthened knowledge in AML system integration (ECM–Quantexa) and BTL/BTG batch processes.
-	•	Improved cross-team collaboration and gained deeper technical understanding of Control-M, ADO governance, and migration validation (Catalyst).
-	•	Developed foundational exposure to AI/ML-based detection and rule optimization using AGETIC AI and Databricks, exploring their potential for contextual monitoring and alert enhancement.
-	•	Enhanced communication and stakeholder management through regular leadership-level reporting.
-
-⸻
-
-Behavioural & Cultural Contributions
-	•	Demonstrated ownership, accountability, and collaborative problem-solving across teams.
-	•	Maintained consistent communication with regional and global stakeholders, ensuring transparency.
-	•	Encouraged a culture of proactive follow-up, continuous improvement, and documentation discipline.
-
-⸻
-
-Forward-Looking Goals
-	•	Deliver successful Korea and Taiwan FSS AML go-lives and post-implementation validation.
-	•	Drive ECM–Quantexa integration completion and automation opportunities within contextual monitoring.
-	•	Leverage AGETIC AI and Databricks platforms to build AI-based detection models and adaptive AML rules, focusing on improving precision and reducing false positives.
-	•	Focus on process optimization to minimize manual intervention in BTL–AA investigation and reporting.
-	•	Continue upskilling in data engineering, cloud, and AI-driven analytics to contribute to the bank’s FinCrime transformation initiatives.
-
-⸻
-
-Feedback about Anu and Areas of Improvement
-	•	Appreciate Anu’s consistent support and guidance during country rollouts and stakeholder escalations.
-	•	Suggest more frequent review connects during high-demand phases (e.g., UAT/BTL retuning) to ensure smoother dependency tracking.
+Anu has been extremely supportive throughout the year, providing clear direction and timely guidance during critical phases like country rollouts and retuning activities.
+	•	Her structured approach, calm decision-making, and focus on delivery excellence helped the team stay aligned even during high-pressure timelines.
+	•	She encourages open communication and collaboration across teams, which has created a positive and transparent working environment.
+	•	Her consistent follow-ups and clarity in expectation-setting have greatly contributed to achieving project milestones smoothly.
+	•	Overall, her leadership has been a key enabler for the successful execution of several AML initiatives this year.
