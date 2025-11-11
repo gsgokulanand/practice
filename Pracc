@@ -1,1 +1,46 @@
-import sys
+Performance and Achievements
+	•	Supported FSS AML new country rollouts (Saudi & Egypt) by coordinating weekly/biweekly calls with country teams to finalize thresholds, HRG watchlists, and approval milestones. Ensured timely completion of DQA, SIT, and UAT ahead of tech go-live (targeted for end-2025) and tracked Saudi IGA readiness for Q1 2026 business go-live.
+	•	Took ownership of Contextual Monitoring activities — managing ADO governance, ensuring clear story descriptions and acceptance criteria, and driving resolution across BA, Product, and Tech teams. Also prepared the Validation Mechanism and Implementation Approach documents currently under review. Received appreciation from Cheytan (Program Manager) for on-time delivery of targeted Q4 items.
+	•	Engaged with Cayden (Product Owner) to share FSS AML topologies and scenario design to help define Blockchain Monitoring architecture, earning formal appreciation for valuable contribution.
+	•	Contributed to the Catalyst (HDP to CDP) migration, focusing on ORA optimization of the zero-byte file mechanism that caused batch outages. Successfully fixed the issue with the tech team and implemented key improvements including entity name normalization, EOM archival, and ACT logic — driven from review to SIT/UAT completion.
+	•	Worked closely with the technology team on BAU fixes and enhancements, ensuring proper prioritization and closure across multiple sprints. Supported SPOT and AA teams for query resolution and environment enablement. Completed HashiCorp Vault onboarding, OneCert migration, and MLR-40 SIT/UAT closure with timely approvals.
+	•	Supported AE Retuning (Annual Cycle) — collaborated with SPOT and BTL teams to execute retuning activities and implemented Control-M regulatory updates to reduce turnaround between event and case creation.
+	•	Explored the use of AI tools like Databricks and AGETIC AI for potential integration of intelligent rule detection and model tuning.
+	•	Received multiple stakeholder appreciations for consistent ownership, technical depth, and collaborative approach across projects.
+
+⸻
+
+Goals and Deliverables Review
+	•	Successfully met key goals set at the beginning of the year, including FSS AML rollouts, contextual monitoring integration, and Catalyst migration.
+	•	Addressed blockers proactively through close coordination with BA, Tech, and Product teams to ensure no delay in delivery timelines.
+	•	Continuous improvement achieved by reducing event-to-case lag in AE, optimizing batch performance, and stabilizing daily BTL operations.
+
+⸻
+
+Learning, Growth, and Skills Acquired
+	•	Strengthened domain expertise in contextual monitoring, BTL/BTG framework, and AML threshold tuning.
+	•	Gained deeper technical understanding of migration, ORA tuning, and control framework optimization.
+	•	Enhanced coordination and agile delivery skills by managing multi-country rollouts, stakeholder calls, and sprint follow-ups.
+	•	Exposure to AI-driven tools (Databricks, AGETIC AI) for AML model enhancement and anomaly detection.
+
+⸻
+
+Behavioural & Cultural Contributions
+	•	Promoted strong cross-functional collaboration between business, product, and technology teams.
+	•	Maintained a proactive approach in issue resolution and stakeholder communication.
+	•	Contributed to team engagement and knowledge sharing through structured documentation and sprint retrospectives.
+
+⸻
+
+Forward-Looking Goals
+	•	Complete successful go-live of Saudi and Egypt rollouts by Q1 2026 and ensure stable post-implementation monitoring.
+	•	Continue driving Contextual Monitoring integration with Quantexa and establish reusable documentation templates.
+	•	Explore AI/ML and automation use cases for rule optimization and alert tuning leveraging Databricks and AGETIC AI.
+	•	Strengthen collaboration across Tech, SPOT, and BA teams to enhance delivery predictability and operational efficiency.
+
+⸻
+
+Feedback about Anu
+
+Anu has been a strong guiding force throughout the year, providing clear direction, timely feedback, and steady support during critical phases like country rollouts, retuning, and migration.
+Her structured approach, calm leadership, and clarity in communication created a positive work environment and helped align priorities effectively. Her consistent follow-ups and result-oriented mindset played a key role in the smooth delivery of multiple FSS AML initiatives.
