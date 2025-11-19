@@ -1,21 +1,2 @@
 
-Hi ,
-
-We would like to update you on the current status and seek your support to obtain AML RFO approval for the technical go-live of Egypt and Saudi.
-
-We have already aligned with both country FCC teams on the approach. For Egypt and Saudi, the very low transaction volume at source is preventing generation of events/cases, which means UAT/UVT activities cannot be completed at this stage.
-
-For Saudi, the IGA approval is still in progress and is expected to be completed within the next month. Once this is finalised and transaction flow stabilises, we plan to activate the scenarios in ECM (business go-live) in Q1 2026, as planned.
-
-At the ECM side, the SIT run with sample data has been completed, and they have confirmed technical readiness for both countries.
-
-For your reference, I have attached all the necessary communications and approvals from the ECM team, CFCC, Business Owner, and the Country FCC teams supporting this approach.
-
-Additionally, if we delay the decision further, the upcoming year-end freeze period and other scheduling constraints may prevent us from implementing the technical changes before 15 December. This could delay the overall programme timeline and make coordination with ECM more challenging.
-
-Hence, we kindly request your support to take this forward with the AML RFO and obtain approval for the technical go-live now, with business activation to follow once source transactions resume in early 2026.
-
-Please let us know if you need any additional details.
-
-Thanks & Regards,
-Gokul
+inport sys
