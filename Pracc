@@ -1,1 +1,13 @@
-inport sys
+
+Team,
+
+We propose the following tactical approach for handling CC AML, Rules2/Model, and Contextual Monitoring events until the decoupling work is taken up:
+	1.	Continue using the existing ingestion flow for all event types.
+	2.	Apply a common scoring approach across CC AML, Rules2/Model, and Contextual Monitoring.
+	3.	Maintain entity-based case creation and correlation:
+	•	Promoted CC AML / Rules2 / Model events crossing thresholds will link to an existing case or create a new one.
+	•	Contextual Monitoring events breaching thresholds will create and correlate to the same entity case.
+
+This ensures consistent detection and case handling during the transition.
+
+The decoupling changes can be implemented after the successful Contextual Monitoring go-live phase.
