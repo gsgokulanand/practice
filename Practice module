@@ -1,2 +1,10 @@
-import sys 
 
+from pyspark import SparkConf, SparkContext
+from pyspark.rdd import RDD
+import sys
+
+# Define the Article class
+class Article:
+    def __init__(self, article_id=None, article_text=""):
+        self.article_id = article_id
+        self.artic
