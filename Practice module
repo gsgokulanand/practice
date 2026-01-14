@@ -1,10 +1,4 @@
 
-from pyspark import SparkConf, SparkContext
-from pyspark.rdd import RDD
-import sys
+Portfolio-level analysis indicates that correlation between CCAML and MANTAS AML events contributes to a limited proportion of overall case handling. Approximately 9% of CCAML cases are correlated with MANTAS events, while the majority (~91%) are investigated independently under the current operating model. In addition, standalone credit card customers represent a small share (~6%) of total CCAML cases, with most activity linked to customers with broader banking relationships.
 
-# Define the Article class
-class Article:
-    def __init__(self, article_id=None, article_text=""):
-        self.article_id = article_id
-        self.artic
+Risk-relevant outcomes are observed across both correlated and non-correlated CCAML cases, indicating that effective risk identification does not depend solely on correlation with MANTAS events. Overall, the data supports an operating model where CCAML and MANTAS risks are assessed separately using appropriate controls, allowing clearer ownership, reduced unnecessary case volumes, and improved operational efficiency without reducing risk coverage.
