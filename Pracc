@@ -1,12 +1,1 @@
-We would like to clarify why Own Account–related transactions should be monitored by the Country AML Team under Securities Services AML scenarios.
-
-Own Account refers to securities held by the bank for its own investment or treasury activities (e.g., proprietary bond purchases). Although these transactions are for the bank’s own account, they are often maintained under multiple sub-accounts within Securities Services and Wealth Management structures.
-
-In many cases, a single Business Partner (BP) or account identifier can be linked to multiple sub-accounts, some of which may also service or resemble external client activity. As a result:
-	•	Transaction volumes can be high
-	•	Operational flows may overlap with client-like activity
-	•	There is potential for unusual or anomalous transaction patterns
-
-From an AML and regulatory standpoint, these factors necessitate country-level monitoring to ensure consistent risk coverage and effective detection of suspicious activity.
-
-Accordingly, inclusion of Own Account transactions within Securities Services AML monitoring is appropriate and required.
+inport sysp
