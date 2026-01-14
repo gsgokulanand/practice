@@ -1,1 +1,3 @@
-inport sysp
+def __init__(self, article_id=None, article_text=""):
+        self.article_id = article_id
+        self.article
