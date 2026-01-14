@@ -1,2 +1,28 @@
 
-import sys
+Hi Anand, Gokul,
+
+As discussed, please find below the current status of correlation between CCAML and MANTAS AML events for the Hong Kong portfolio, along with supporting data points.
+
+Current Observation – CCAML Standalone vs Correlated Cases
+
+Based on the recent monthly data:
+	•	The majority of CCAML cases are generated as standalone cases, without correlation to MANTAS events.
+	•	Only a very small percentage of CCAML cases are currently correlated with MANTAS AML events.
+
+Case Volume Summary (Illustrative):
+	•	For the periods Aug’25 to Dec’25, CCAML standalone cases range between 430–530 cases per month.
+	•	Out of these, the number of cases correlated with MANTAS events is minimal, for example:
+	•	Aug’25: 19 correlated cases
+	•	Sep’25: 18 correlated cases
+	•	This represents less than 5% of total CCAML case volumes.
+
+Customer-Level View:
+	•	CCAML cases are largely split across:
+	•	Standalone customer = No
+	•	Standalone customer = Yes
+	•	However, correlation with MANTAS remains consistently low across both categories.
+
+Key Inference:
+	•	The existing correlation between CCAML and MANTAS contributes to a very limited reduction in case volume.
+	•	Most CCAML risks are investigated independently even today.
+	•	This data supports the view that decoupling CCAML and MANTAS processing will not materially impact investigative coverage, while enabling clearer ownership, simpler processing, and improved optimization at a product level.
