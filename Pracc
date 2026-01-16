@@ -1,3 +1,18 @@
-def __init__(self, article_id=None, article_text=""):
-        self.article_id = article_id
-        self.article
+Final Conclusion (With Supporting Statistics)
+
+Portfolio-level analysis across all markets indicates that correlation between CCAML and MANTAS events plays a limited role in identifying risk-relevant cases.
+	•	Only ~9% of total CCAML cases are correlated with MANTAS AML events, while the remaining ~91% of CCAML cases are investigated independently.
+	•	Standalone credit card customers account for ~6% of total CCAML cases, with ~94% linked to customers holding broader banking relationships.
+
+Risk-relevant (RR) outcomes further reinforce this observation:
+	•	In most markets, the RR conversion rate from correlated CCAML cases is low, typically below 1% of total cases (e.g., HK ~0.4%, MY ~0.6%, SG ~0.4%).
+	•	By contrast, overall RR conversion rates are materially higher, driven primarily by non-correlated CCAML cases (e.g., HK ~5%, MY ~9.6%, VN ~66.6%).
+	•	Markets showing higher RR percentages on correlated cases are generally low-volume markets, where ratios are statistically inflated and not indicative of higher underlying risk.
+
+These statistics demonstrate that most risk-relevant activity is already being identified without reliance on CCAML–MANTAS correlation.
+
+Based on this evidence, decoupling CCAML and MANTAS processing is expected to improve operational efficiency by reducing duplicate handling and unnecessary case promotion. At the same time, risk coverage will not be diluted, as:
+	•	CCAML events will continue to be assessed through rule-based optimization before case creation, and
+	•	MANTAS events will be evaluated through contextual monitoring and scoring, with only higher-risk events promoted to cases.
+
+Overall, the data supports a model that delivers better efficiency while maintaining strong and consistent risk detection, ensuring that investigative focus remains on the most relevant risks.
