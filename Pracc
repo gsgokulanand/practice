@@ -1,1 +1,28 @@
-import sys 
+Hi Ganesh, Srikar,
+
+We have completed a detailed portfolio-level analysis to assess the feasibility of decoupling CCAML and MANTAS batch processing and to evaluate any potential impact on risk coverage and operational efficiency.
+
+At a high level, the analysis indicates that correlation between CCAML and MANTAS AML events plays a limited role in overall CCAML case handling. The majority of CCAML cases continue to be investigated independently, and risk-relevant outcomes are observed across both correlated and non-correlated scenarios. These findings support the proposal to move towards a decoupled operating model, subject to appropriate mitigation and oversight.
+
+Key summary points highlighted in the draft note include:
+	•	Approximately ~9% of total CCAML cases are correlated with MANTAS AML events, with the remaining ~91% handled independently.
+	•	Standalone credit card customers account for ~6% of total CCAML cases, with the balance linked to customers holding broader banking relationships.
+	•	Risk-relevant (RR) conversion trends vary by market, and higher relative percentages in some correlated scenarios are primarily influenced by low underlying volumes rather than systemic dependency.
+
+Please refer to the attached analysis sheet for the complete country-wise statistics, including:
+	•	CCAML case volumes
+	•	CCAML–MANTAS correlation counts
+	•	RR conversion rates for correlated and non-correlated cases
+	•	The final “RR Dominance Indicator”, which provides a comparative view of where higher RR conversion is observed.
+
+It is also important to note that, based on available data, RR outcomes cannot be conclusively attributed to either CCAML or MANTAS in correlated cases, and this has been explicitly called out in the narrative. To address this, the proposed approach includes a mitigation framework where:
+	•	CCAML events continue to flow through rule-based optimisation and case promotion logic independently.
+	•	MANTAS AML events are assessed independently through contextual monitoring and Quantexa-based scoring.
+	•	Periodic review or referencing between decoupled CCAML and MANTAS outcomes can be performed, where required, to ensure consistency in risk identification.
+
+Before progressing this analysis for broader stakeholder or regulatory discussions, we would appreciate your review and approval of:
+	1.	The overall conclusions drawn from the data,
+	2.	The proposed decoupled operating approach with mitigation controls, and
+	3.	The use of the attached sheet as the primary statistical reference.
+
+Please let us know if you would like any refinements to the positioning or additional clarifications before sign-off.
