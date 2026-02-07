@@ -1,3 +1,52 @@
+We’re implementing an AI-powered alert prioritization system that uses machine learning to automatically score alerts based on patterns learned from thousands of past investigations
+
+We’re adding an AI layer on top of our existing Mantas AML system that learns from our past investigations to automatically predict which alerts are most likely to be real money laundering. It’s like having a smart assistant that sorts our inbox - putting the most important emails at the top. Our investigators get a prioritized queue, focus on what matters, and we reduce wasted time on false positives by 40-50%.”
+
+Problem: 85% of our AML alerts are false positives; investigators waste time on low-value cases
+Solution: AI scores each alert automatically and creates a prioritized work queue
+Impact: 50% less time on false positives, 20% better detection, $500K-$1M annual savings
 
 
-import spark sql
+-------
+INNOVATION IDEA #2: Real-Time Customer Risk Profiling with Dynamic Thresholds
+What It Does (In 3 Lines)
+Automatically adjusts Mantas alert thresholds for each customer based on their real-time risk profile, transaction history, and behavioral patterns. High-risk customers get tighter monitoring, low-risk customers get relaxed thresholds, reducing false positives while improving detection of actual suspicious activity.
+The Problem
+	∙	Current Mantas scenarios use one-size-fits-all static thresholds (e.g., $10K for everyone)
+	∙	A $5K transaction is normal for a corporate client but suspicious for a student account
+	∙	We generate false positives on established, low-risk customers doing expected business
+	∙	We may miss suspicious activity on high-risk customers because thresholds are too high
+The Solution
+Implement a dynamic risk-based threshold system that:
+	∙	Calculates individual customer risk scores based on multiple factors
+	∙	Automatically adjusts Mantas scenario thresholds per customer
+	∙	Updates risk profiles in real-time as customer behavior evolves
+	∙	Integrates with existing KYC data, transaction history, and external intelligence
+
+How It Works:
+Step 1: Customer Risk Scoring Engine
+Risk Score = Weighted combination of:
+- Customer type (retail, corporate, PEP, etc.)
+- Account age and relationship tenure
+- Geographic risk (countries of operation)
+- Industry/occupation risk
+- Historical transaction patterns
+- Previous alert/SAR history
+- External data (adverse media, sanctions)
+
+Step 2: Dynamic Threshold Calculation
+For each Mantas scenario:
+- Base threshold (current static threshold)
+- Customer risk multiplier (0.5x to 3x based on risk score)
+- Adjusted threshold = Base × Risk Multiplier
+
+Example - Structuring Scenario:
+- Low risk customer (0.5x): Threshold = $10K × 0.5 = $5K
+- Medium risk (1.0x): Threshold = $10K × 1.0 = $10K
+- High risk (2.0x): Threshold = $10K × 2.0 = $20K
+
+Step 3: Real-Time Updates
+∙	Risk scores recalculated daily or after significant events
+	∙	Thresholds automatically updated in Mantas
+	∙	Audit trail of all threshold changes
+
