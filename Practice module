@@ -1,4 +1,14 @@
-class Article:
-    def __init__(self, article_id=None, article_text=""):
-        self.article_id = article_id
-        self.article
+Act as an AML risk framework architect.
+
+Using the provided Threats, Vulnerabilities, and ML/TF Methods:
+
+Generate a structured many-to-many risk mapping matrix.
+
+Output must:
+- Be in table format only
+- Include 5 columns:
+  Threat | Vulnerability | ML/TF Method | Risk Level (Low/Medium/High) | Mapping Justification
+- Ensure regulatory alignment (FATF, Basel, Wolfsberg principles)
+- Avoid duplication unless logically required
+- Repeat fields where multiple mappings exist
+- Do not add any explanation outside the table
