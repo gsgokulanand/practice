@@ -1,2 +1,15 @@
-import pandas
-import os
+1. BTL Event Execution – Multi-Market
+
+Successfully completed the BTL event and event transaction extract handover for 6 markets (SG, MY, TH, AE, HK, VN) before the cutoff period.
+This timely delivery enabled SPOT to derive thresholds and overlays based on BTL results and keeps the revised threshold implementation on track for Q1 2026 to improve operational efficiency.
+
+2. Korea Engagement – Knowledge Transfer
+
+Successfully completed the Korea engagement by the FSS AML application team, providing KT to the country technology team.
+The sessions covered business and architecture context, data lineage, BAU and DQ discussions, and detection scenario walkthroughs, ensuring alignment with the KR team’s environment and processes.
+The engagement was well received and appreciated by the Country FCC Head.
+
+3. Expansion Roadmap
+
+Egypt is planned to go live in Q1 2026, followed by the next slot of countries Taiwan and Saudi Arabia targeted before Q3 2026.
+Overall, we are targeting activation of three new countries this year, further expanding business coverage.
